@@ -1,6 +1,6 @@
 import Image from "next/image";
 // import { Dropdown } from "flowbite-react";
-import DropdownButton from "./components/dropdown";
+import DropdownButton from "./components/Dropdown";
 import Navbar_ from "./components/Navbar";
 import Hero from "./components/Hero";
 import Carousel from "./components/Carousel";
