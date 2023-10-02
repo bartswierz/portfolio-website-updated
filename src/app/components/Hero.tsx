@@ -1,3 +1,4 @@
+// Reference: https://flowbite.com/docs/components/jumbotron/
 const Hero = () => {
   return (
     <section className="bg-white dark:bg-gray-900">
