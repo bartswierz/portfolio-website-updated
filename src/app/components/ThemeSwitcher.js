@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 // REFERENCE next-themes npm package - https://www.npmjs.com/package/next-themes
 const ThemeSwitcher = () => {
   const [mounted, setMounted] = useState(false);
-  const { theme, setTheme } = useTheme();
+  const { theme, setTheme } = useTheme("dark");
 
   console.log("theme is: ", theme);
   // Using this to ensure our client and server has the same code to prevent errors when rendering. When our component is mounted, this will be set to true
