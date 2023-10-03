@@ -5,6 +5,8 @@ import Navbar_ from "./components/Navbar";
 // import { DarkThemeToggle, Flowbite } from "flowbite-react";
 // import { ThemeProvider } from "next-themes";
 import Providers from "./providers";
+import ThemeSwitcher from "./components/ThemeSwitcher";
+
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -21,6 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         {/* <Navbar_ /> */}
         {/* <ThemeProvider>{children}</ThemeProvider> */}
+        <ThemeSwitcher />
         <Providers>{children}</Providers>
       </body>
       {/* </Flowbite> */}
