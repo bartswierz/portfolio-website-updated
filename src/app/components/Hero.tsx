@@ -1,10 +1,11 @@
 // Reference: https://flowbite.com/docs/components/jumbotron/
 const Hero = () => {
   return (
-    <section className="bg-white- text-white dark:bg-gray-900">
-      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+    <section className="dark:bg-gray-900">
+      <div className="b py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none text-gray-900- md:text-5xl lg:text-6xl dark:text-white">
           Bartosz Swierzynski
+          {/* Who you gonna call? GHOST BOO-STERS */}
         </h1>
         <h1 className="mb-4 text-2xl font-extrabold tracking-tight leading-none text-gray-900- md:text-5xl lg:text-6xl dark:text-white">
           Front-end Developer

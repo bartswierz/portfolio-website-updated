@@ -6,7 +6,9 @@ const config: Config = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./public/**/*.html",
+    "./node_modules/flowbite-react/**/*.js",
   ],
+
   theme: {
     extend: {
       backgroundImage: {

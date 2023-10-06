@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "flowbite": "^1.8.1",
-    "flowbite-react": "^0.6.3",
+    "flowbite-react": "^0.6.4",
     "next": "latest",
     "next-themes": "^0.2.1",
     "react": "latest",
