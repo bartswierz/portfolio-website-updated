@@ -2,7 +2,7 @@ import { ProjectData } from "../types/index";
 // import "../../../public/assets/images";
 // import "./assets/images";
 
-const NextLevelProject: ProjectData = {
+const nextLevelProject: ProjectData = {
   id: 1,
   header: "Next-Level Games",
   subheader: "Next.js Game Information Web Application",
@@ -29,7 +29,7 @@ const NextLevelProject: ProjectData = {
   },
 };
 
-const AlphaFootwearProject: ProjectData = {
+const alphaFootwearProject: ProjectData = {
   id: 2,
   header: "Alpha Footwear",
   subheader: "Full-Stack E-Commerce Web Application",
@@ -56,7 +56,7 @@ const AlphaFootwearProject: ProjectData = {
   },
 };
 
-const TrailHawk: ProjectData = {
+const trailHawkProject: ProjectData = {
   id: 3,
   header: "Trailhawk",
   subheader: "Hiking & State Park Map App",
@@ -64,7 +64,7 @@ const TrailHawk: ProjectData = {
   description:
     "If youre an avid hiker or just looking for a new adventure, Trailhawk is the perfect app for you. Trailhawk lets you discover the best of the U.S. State Parks and National Parks. From casual hiking trails to treks spanning over 2000 miles, Trailhawk has you covered.",
   liveURL: "https://trailhawk.netlify.app/",
-  githubURL: "https://github.com/bartswierz/employee-records",
+  githubURL: "https://github.com/bartswierz/map-search",
   accordionObj: {
     description:
       "This Trailhawk web application is a map app built using React, Tailwind CSS, React-Leaflet, and Google Maps API. The app allows users to search for hiking trails and state parks in the United States with an autocomplete matching user input by filtering through our current 27 locations across the United States. The app is built with scalability in mind and can easily accomodate more data without further configuration. The app is deployed on Netlify and the code is hosted on GitHub.",
@@ -83,5 +83,60 @@ const TrailHawk: ProjectData = {
   },
 };
 
+const polarisProject: ProjectData = {
+  id: 4,
+  header: "Polaris",
+  subheader: "MERN Stack - Employee Database Management App",
+  technologyList: ["React.js", "Node.js", "Express.js", "MongoDB", "SCSS", "Material UI"],
+  description:
+    'MERN stack application containing employee record data with CRUD functionality. If you would like to run the application, please navigate to my github repository using the button below and read the "Getting Started" section of the documentation to set up your very own MongoDB and local environment!',
+  // liveURL: "",
+  githubURL: "https://github.com/bartswierz/employee-records",
+  accordionObj: {
+    description:
+      "The Polaris application is database management system built using the MERN stack (MongoDB, Express.js, Node.js, and React) that provides comprehensive CRUD (Create, Read, Update, Delete) functionality for managing employee data. My MERN stack application features a captivating space theme that adds an immersive and visually stunning experience for users. The highlight of this theme is an animated star background that gracefully traverses across the screen, creating a sense of movement and depth reminiscent of a space voyage.",
+    reason:
+      "I embarked on building this project with the primary goal of enhancing my skills and gaining hands-on experience with the MERN stack (MongoDB, Express.js, Node.js, and React). While I already had a solid understanding of React on the frontend, I recognized the importance of becoming well-rounded and proficient in backend development as well. This project provided the perfect opportunity to dive into backend technologies and become a stronger and more versatile developer overall.",
+    difficulties:
+      "As a front-end developer transitioning to full-stack development, my main challenge in building my MERN stack application was mastering Node.js and Express.js. Initially, understanding how to effectively setup the server side of the project proved to be the most difficult aspect. Debugging my server-side code took up a significant portion of the project's development phase. However, through dedicated research and experimentation, I gradually gained proficiency in debugging techniques, which led to a breakthrough. Over time, things started to click, and I found myself genuinely enjoying the process. Once the server-side foundation was established, the remainder of the project became more manageable, allowing me to focus on other aspects of development.",
+    features: [
+      "Implement an ordering option based on Position, Level, or Salary",
+      "Implement a raise button using a percentage of the current salary",
+    ], // for personal projects
+  },
+};
+
+const civilienceProject: ProjectData = {
+  id: 11,
+  header: "Civilience",
+  subheader: "Community Health Tracker App",
+  technologyList: ["React.js", "CSS", "AWS Amplify", "AWS DynamoDB", "Amplify Authentication", "Context Hooks", "Redux"],
+  description:
+    'As a Front-end co-team lead at Civilience, I collaborated closely with the UI/UX Design team to build a complex health tracker web application from scratch by translating Figma designs into working code. The app is intended to be used by communities across the US to help them understand their emotional health. To see the app, click "View App" below, sign up, and then click the "Learn More" button within the Emotional Health tab.',
+  liveURL: "https://www.civilience.app/",
+  githubURL: "https://civilience.social/solutions/",
+  accordionObj: {
+    description:
+      "This service helps users understand their emotional health by guiding them through a questionnaire and process screens to align their feelings and actions. It also provides community insights based on zipcode.",
+    reason:
+      "The Emotional Health Tracker (Feelings Flow Tracker) helps individuals and communities understand their emotional health through a daily survey that provides new vocabulary and aligns feelings and actions. It's designed to be used across the US and is part of the Civilience non-profit organization.",
+    difficulties:
+      "As newcomers to AWS, we had to read a lot of documentation and research to utilize its technologies. With the help of our supervisor, we used Amplify Authenticator and DynamoDB for data storage. Despite the slow process, we created a strong foundation based on Figma Designs. As a Front-end co-team lead, I managed task delegation and task quality using previous management skills. We divided the task list according to the codebase, avoiding overlap and meeting deadlines successfully.",
+    learned:
+      "At Civilience, I honed my team collaboration skills as a developer, working closely with UI/UX Design, Front-end, and Data Science teams on a constantly evolving app. As Frontend Co-team lead, I liaised with UI/UX leads to allocate tasks efficiently and improved my management skills. Regular cross-team meetings ensured everyone stayed aligned, addressed challenges, and shared updates. I also presented weekly front-end demos, answered questions, and assisted the UI/UX Design Team in building a mobile-friendly application by answering what is possible on the Front-end.",
+    contributions: [
+      "Built the foundation of the 5 Feelings Flow Questions & Summary Page as per the Figma designs",
+      "Redesigned the default Amplify Authenticator design to match the provided Figma Designs",
+      "Implemented modal screens for Glossary definitions",
+      "Implemented user form data submission to DynamoDB",
+      "Implemented React Context Hooks to work with form data",
+      "Implemented the Summary Page to display all user data from the five questions",
+      "Created custom data file of over 1500+ unique pieces of information to be used dynamically across the five questions",
+    ], // for work projects
+  },
+};
+
 // Place current and new projects into this array
-export const PersonalProjectList: ProjectData[] = [NextLevelProject, AlphaFootwearProject, TrailHawk];
+export const PersonalProjectList: ProjectData[] = [nextLevelProject, alphaFootwearProject, trailHawkProject, polarisProject];
+
+export const WorkProjectList: ProjectData[] = [civilienceProject];

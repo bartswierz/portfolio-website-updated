@@ -4,7 +4,7 @@ export interface ProjectData {
   subheader: string;
   technologyList: string[];
   description: string;
-  liveURL: string;
+  liveURL?: string; //Polaris doesnt have live url
   githubURL: string;
 
   accordionObj: {

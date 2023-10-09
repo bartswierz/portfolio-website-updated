@@ -19,7 +19,11 @@ const config: Config = {
       // TODO - add custom colors as we go along to avoid having to change color in multiple places in the future
       backgroundColor: {
         primary: "#252839",
-        technology: "#ffc400e8",
+        technology: "#ffb700",
+      },
+      textColor: {
+        primary: "#333",
+        dark: "#ffb700",
       },
     },
   },

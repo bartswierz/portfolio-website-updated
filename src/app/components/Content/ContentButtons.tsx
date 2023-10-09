@@ -17,7 +17,7 @@ interface ContentButtonsProps {
 const ContentButtons = ({ liveURL, githubURL, accordionObj }: ContentButtonsProps) => {
   return (
     <div className="flex justify-center items-center gap-2">
-      <Button text="View Live" buttonType="link" link={liveURL && liveURL} />
+      {liveURL && <Button text="View Live" buttonType="link" link={liveURL} />}
       <Button text="View Code" buttonType="link" link={githubURL && githubURL} />
 
       {/* TODO - pass along accordingObj */}

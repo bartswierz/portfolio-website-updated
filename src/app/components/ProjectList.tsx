@@ -10,7 +10,7 @@ interface ProjectListProps {
 const ProjectList = ({ list }: ProjectListProps) => {
   // console.log("list", list);
   return (
-    <div className="flex flex-col w-full max-w-[1000px] max-w-[60vw]- gap-12 text-white">
+    <div className="flex flex-col w-full max-w-[1000px] gap-12 text-white">
       {list.map((project) => (
         <Project data={project} key={project.id} />
       ))}

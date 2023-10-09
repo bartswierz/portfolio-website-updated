@@ -24,8 +24,8 @@ const poppins = Poppins({
 // https://www.youtube.com/watch?v=optD7ns4ISQ - dark theme
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark">
-      <body className={`${poppins.className} dark:bg-slate-900`}>
+    <html lang="en" className="dark text-primary">
+      <body className={`${poppins.className} bg-gray-300 dark:bg-slate-900`}>
         <Navbar_ />
         {/* <Providers> */}
         {/* <ThemeSwitcher /> */}
