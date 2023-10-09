@@ -9,7 +9,13 @@ export default function Modal__() {
 
   return (
     <>
-      <Button onClick={() => props.setOpenModal("default")}>Project Description</Button>
+      <Button
+        color="undefined"
+        onClick={() => props.setOpenModal("default")}
+        className="bg-red-500- bg-transparent border-2 border-white font-bold hover:bg-blue-700"
+      >
+        Project Description
+      </Button>
       <Modal show={props.openModal === "default"} onClose={() => props.setOpenModal(undefined)}>
         <Modal.Header>Project Overview</Modal.Header>
         <Modal.Body>

@@ -11,8 +11,7 @@ const Hero = () => {
           Front-end Developer
         </h1>
         <p className="mb-8 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 lg:px-48 dark:text-gray-400">
-          Here at Flowbite we focus on markets where technology, innovation, and capital can unlock long-term value and drive economic
-          growth.
+          Coding with Curiosity, Designing with a Vision
         </p>
         <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <a

@@ -1,16 +1,12 @@
 export interface ProjectData {
-  title: string;
-  subtitle: string;
+  id: number;
+  header: string;
+  subheader: string;
   technologyList: string[];
   description: string;
-  liveURL: {
-    url: string;
-    // text: string;
-  };
-  githubURL: {
-    url: string;
-    // text: string;
-  };
+  liveURL: string;
+  githubURL: string;
+
   accordionObj: {
     description: string;
     reason: string;

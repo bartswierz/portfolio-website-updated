@@ -16,6 +16,11 @@ const config: Config = {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
+      // TODO - add custom colors as we go along to avoid having to change color in multiple places in the future
+      backgroundColor: {
+        primary: "#252839",
+        technology: "#ffc400e8",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

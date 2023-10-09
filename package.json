@@ -11,10 +11,11 @@
   "dependencies": {
     "flowbite": "^1.8.1",
     "flowbite-react": "^0.6.4",
-    "next": "latest",
+    "next": "^13.5.4",
     "next-themes": "^0.2.1",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "react-icons": "^4.11.0"
   },
   "devDependencies": {
     "@types/node": "latest",

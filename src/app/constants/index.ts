@@ -1,19 +1,16 @@
 import { ProjectData } from "../types/index";
+// import "../../../public/assets/images";
+// import "./assets/images";
 
 export const NextLevelProject: ProjectData = {
-  title: "Next-Level Games",
-  subtitle: "Next.js Game Information Web Application",
+  id: 1,
+  header: "Next-Level Games",
+  subheader: "Next.js Game Information Web Application",
   technologyList: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "Postman", "Shadcn UI"],
   description:
     "Discover an expansive world of gaming with our game information web application with access to over 850,000+ games. The web application is built on Next.js with frequently updated data fetched via API from RAWG API.",
-  liveURL: {
-    url: "https://next-level-games.netlify.app/",
-    // text: ""
-  },
-  githubURL: {
-    url: "https://github.com/bartswierz/game-website",
-    // text: ""
-  },
+  liveURL: "https://next-level-games.netlify.app/",
+  githubURL: "https://github.com/bartswierz/game-website",
   accordionObj: {
     description:
       "Next-Level Games is a game information web application similar to Steam that allows vistors to browse through virtually all available games in the world surpassing over 850,000+ games that are frequently updated by RAWG API. Data is accessed through using RAWG API's API. Vistors can directly search for games or browse through the various genres and platforms. The web application is built with Next.js, TypeScript, Tailwind CSS, and Shadcn. Building the app required extensively reading through RAWG API Documentation along with Postman to test fetch calls as there were many kinds of calls and query parameters for all kinds of game data. The web application is deployed on Netlify and the code is hosted on GitHub.",
@@ -33,7 +30,7 @@ export const NextLevelProject: ProjectData = {
 };
 
 // Place current and new projects into this array
-export const ProjectList: ProjectData[] = [
+export const PersonalProjectList: ProjectData[] = [
   NextLevelProject,
   // NextLevelProject
 ];
