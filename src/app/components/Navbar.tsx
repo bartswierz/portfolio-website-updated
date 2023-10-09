@@ -1,8 +1,7 @@
 "use client";
-import { Navbar } from "flowbite-react";
 import Link from "next/link";
-import Image from "next/image";
 import { DarkThemeToggle, Flowbite } from "flowbite-react";
+
 const Navbar_ = () => {
   return (
     <nav className="bg-white border-gray-200 dark:bg-gray-900">

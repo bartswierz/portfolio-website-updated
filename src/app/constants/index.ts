@@ -29,8 +29,36 @@ export const NextLevelProject: ProjectData = {
   },
 };
 
+export const AlphaFootwearProject: ProjectData = {
+  id: 2,
+  header: "Alpha Footwear",
+  subheader: "Full-Stack E-Commerce Web Application",
+  technologyList: ["React.js", "TypeScript", "Firebase", "Redux", "SCSS", "Material UI"],
+  description:
+    "A modern user-friendly E-commerce web application containing a wide selection of footwear. All product data and user authentication is stored on the back-end utilizing our Firebase Database. The web application is built with scalability in mind and can easily accomodate more products without further configuration.",
+  liveURL: "https://alpha-footwear.netlify.app/",
+  githubURL: "https://github.com/bartswierz/shopping-website",
+  accordionObj: {
+    description:
+      "Alpha Footwear is the solution for getting top quality footwear without breaking the bank. Customers will enjoy and appreciate a minimalist layout without overwhelming distractions cluttering the screen. The user experience was the push for keeping the layout as minimal as possible without compromising other sections.",
+    reason:
+      "I built this project to challenge myself by creating a large e-commerce app. My previous project(Bots-for-hire) helped get a basic understanding of React which allowed me to set the bar higher this time around and push myself to create a scalable React App. Going into the project, I have planned to update this project as I learn new technologies. I built the majority of my app quickly within a span of two-three weeks before starting my Frontend Internship in January(2023). Since then I have been learning TypeScript and Material UI which have been really enjoyable to learn. I have grown to love TypeScript after a short period of time and while I am still learning, I plan to use TypeScript for all my future projects because of how helpful it has been to help catch and prevent difficult bugs during development.",
+    difficulties:
+      "The difficultly with this project came down to learning new technologies and implementing them as I improved. I built this project shortly after completing my React Udemy course and tested myself by putting everything I had learned to use. Learning multiple technologies at once made it a bit more difficult requiring reading a lot of documentation but it turned out to be enjoyable and very beneficial. I learned more about Firebase, Material UI, and recently, TypeScript. Implementing TypeScript into my application after already doing the majority of it with JavaScript proved to have its challenges as the change gave me many errors upon changing. However, learning the basics first helped me resolve my errors and turned out to be enjoyable converting my project. What really helped me was using my previous classroom experience working with Java. Java being a strongly typed language, made learning the syntax of TypeScript easier to understand. Overall, I enjoyed using TypeScript and plan to use it for all my future projects because of how useful it can be during development and refactoring code.",
+    learned: "Learned Placeholder",
+    // contributions: []
+    features: [
+      "Update Product Card Mobile Design",
+      "Flesh out the Shipping/Checkout section",
+      "Update Size and Color Select in Product Card",
+      "Add Unit Tests using Jest",
+    ],
+  },
+};
+
 // Place current and new projects into this array
 export const PersonalProjectList: ProjectData[] = [
   NextLevelProject,
+  AlphaFootwearProject,
   // NextLevelProject
 ];

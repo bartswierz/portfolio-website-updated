@@ -22,9 +22,7 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
       <Accordion.Panel>
         <Accordion.Title>Project Description</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>{description}</p>
-          </p>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">{description}</p>
         </Accordion.Content>
       </Accordion.Panel>
 
@@ -32,9 +30,7 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
       <Accordion.Panel>
         <Accordion.Title>Why did I build this project?</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>{reason}</p>
-          </p>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">{reason}</p>
         </Accordion.Content>
       </Accordion.Panel>
 
@@ -42,9 +38,7 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
       <Accordion.Panel>
         <Accordion.Title>Build Difficulties?</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>{difficulties}</p>
-          </p>
+          <p className="mb-2 text-gray-500 dark:text-gray-400">{difficulties}</p>
         </Accordion.Content>
       </Accordion.Panel>
 
@@ -52,9 +46,14 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
       <Accordion.Panel>
         <Accordion.Title>Future Features</Accordion.Title>
         <Accordion.Content>
-          <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>Future Features Placeholder text</p>
-          </p>
+          <ul className="mb-2 text-gray-500 dark:text-gray-400 ">
+            {features &&
+              features.map((feature, idx) => (
+                <li key={idx} className="list-disc list-inside">
+                  {feature}
+                </li>
+              ))}
+          </ul>
         </Accordion.Content>
       </Accordion.Panel>
     </Accordion>

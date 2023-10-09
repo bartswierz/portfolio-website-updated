@@ -18,8 +18,6 @@ export default function Modal__({ accordionObj }: ModalProps) {
   const [openModal, setOpenModal] = useState<string | undefined>();
   const props = { openModal, setOpenModal };
 
-  console.log("ACCORDION OBJ: ", accordionObj);
-
   return (
     <>
       {/* BUTTON TO OPEN MODAL */}
@@ -33,7 +31,7 @@ export default function Modal__({ accordionObj }: ModalProps) {
 
       {/* MODAL CONTENT - DISPLAYED IN CENTERED VERTICALLY & HORIZONTALLY */}
       <Modal className="bg-gray-900/70" show={props.openModal === "default"} onClose={() => props.setOpenModal(undefined)}>
-        <div className="dark:bg-primary">
+        <div className="dark:bg-primary overflow-auto">
           <Modal.Header>Project Overview</Modal.Header>
           <Modal.Body>
             <Accordion__ accordionObj={accordionObj} />
