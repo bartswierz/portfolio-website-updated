@@ -7,7 +7,6 @@ import Navbar_ from "./components/Navbar";
 import Providers from "./providers";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import "flowbite";
-
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -18,13 +17,13 @@ export const metadata: Metadata = {
 // https://www.youtube.com/watch?v=optD7ns4ISQ - dark theme
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <body>
         <Navbar_ />
-        <Providers>
-          <ThemeSwitcher />
-          {children}
-        </Providers>
+        {/* <Providers> */}
+        {/* <ThemeSwitcher /> */}
+        {children}
+        {/* </Providers> */}
         {/* <script src="../path/to/flowbite/dist/flowbite.js" async></script> */}
       </body>
     </html>
