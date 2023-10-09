@@ -2,7 +2,7 @@ import { ProjectData } from "../types/index";
 // import "../../../public/assets/images";
 // import "./assets/images";
 
-export const NextLevelProject: ProjectData = {
+const NextLevelProject: ProjectData = {
   id: 1,
   header: "Next-Level Games",
   subheader: "Next.js Game Information Web Application",
@@ -29,7 +29,7 @@ export const NextLevelProject: ProjectData = {
   },
 };
 
-export const AlphaFootwearProject: ProjectData = {
+const AlphaFootwearProject: ProjectData = {
   id: 2,
   header: "Alpha Footwear",
   subheader: "Full-Stack E-Commerce Web Application",
@@ -56,9 +56,32 @@ export const AlphaFootwearProject: ProjectData = {
   },
 };
 
+const TrailHawk: ProjectData = {
+  id: 3,
+  header: "Trailhawk",
+  subheader: "Hiking & State Park Map App",
+  technologyList: ["React.js", "Tailwind CSS", "React-leaflet", "Google Maps API"],
+  description:
+    "If youre an avid hiker or just looking for a new adventure, Trailhawk is the perfect app for you. Trailhawk lets you discover the best of the U.S. State Parks and National Parks. From casual hiking trails to treks spanning over 2000 miles, Trailhawk has you covered.",
+  liveURL: "https://trailhawk.netlify.app/",
+  githubURL: "https://github.com/bartswierz/employee-records",
+  accordionObj: {
+    description:
+      "This Trailhawk web application is a map app built using React, Tailwind CSS, React-Leaflet, and Google Maps API. The app allows users to search for hiking trails and state parks in the United States with an autocomplete matching user input by filtering through our current 27 locations across the United States. The app is built with scalability in mind and can easily accomodate more data without further configuration. The app is deployed on Netlify and the code is hosted on GitHub.",
+    reason:
+      "I was curious about how to use Leaflet and Google Maps together to create a maps application to better understand what is going on under the hood. This is something I have been wanting to learn for a while and can be very useful to have in a real-world project as maps are used in many different applications. I ended up really enjoying myself and learned a lot reading through the documentation and implementing it into the app. I learn best my being hands on and building projects that interest me. I was suprised to learn that it was very use to setup the application with so much features and functionality right out of the box with leaflet and google maps API. I was able to get the app up and running in a few hours and spent the rest of the time styling the app and adding more features. I plan to continue to add more features to this app.",
+    difficulties:
+      "During the initial setup developing the application, we encountered a bit of a roadblock when it came time to integrate Google Maps Layer with React-Leaflet. React-Leaflet provided clear and user-friendly documentation which made it quick and easy to implement, but there wasnt much out there when it came to implmenting Google Maps with it. To solve this issue, we dived deep into the documentation for React-leaflet , original leaflet, and google maps and stackoverflow to find a solution. After spending a bit of time reading through various resources and tinkering within our application, we came across an npm package that made the integration simple. I used the react-leaflet-google-layer package that allow us to pass in a component with our google maps API key as a prop, and placing this within our MapsContainer component to apply the google maps layer. This resolved our issue and allowed us to continue building out our application.",
+    // learned: string,
+    // contributions?: string[]; // for work projects
+    features: [
+      "Favorite Location - User can save their favorite location",
+      "Suggestion Option Button - User can click a button to get a random suggestion from our available locations",
+      "Ratings",
+      "Dark mode / Light mode Toggle - This will also change the map theme",
+    ], // for personal projects
+  },
+};
+
 // Place current and new projects into this array
-export const PersonalProjectList: ProjectData[] = [
-  NextLevelProject,
-  AlphaFootwearProject,
-  // NextLevelProject
-];
+export const PersonalProjectList: ProjectData[] = [NextLevelProject, AlphaFootwearProject, TrailHawk];

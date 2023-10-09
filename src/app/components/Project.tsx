@@ -14,7 +14,7 @@ const Project = ({ data }: ProjectProps) => {
   // console.clear();
   // console.log("data*: ", data);
   return (
-    <div className="text-white">
+    <div className="text-white border-[3px] border-white rounded-lg overflow-hidden">
       {/* TODO - TEMPORARY - may replace with desktop/phone layout */}
       {/* <CarouselDefault /> */}
 
