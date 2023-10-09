@@ -7,6 +7,11 @@
   --color: #3123dd;
 }
 
+/* SMOOTH SCROLLING */
+html {
+  scroll-behavior: smooth;
+}
+
 [data-theme="dark"],
 [data-theme="dark"] {
   --background-color: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);

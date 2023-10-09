@@ -12,13 +12,20 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-4">
       <Hero />
+
+      <div id="about"></div>
       <About />
 
+      <div id="work"></div>
       <ProjectHeading text="Work Projects" />
       <ProjectList list={WorkProjectList} />
 
+      <div id="personal"></div>
       <ProjectHeading text="Personal Projects" />
       <ProjectList list={PersonalProjectList} />
+
+      {/* CONTACT */}
+      <div id="contact">Contact</div>
     </main>
   );
 }
