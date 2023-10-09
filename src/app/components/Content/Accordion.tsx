@@ -2,7 +2,20 @@
 
 import { Accordion } from "flowbite-react";
 
-export default function Accordion__() {
+interface AccordionProps {
+  accordionObj: {
+    description: string;
+    reason: string;
+    difficulties: string;
+    learned?: string;
+    contributions?: string[]; // for work projects
+    features?: string[]; // for personal projects
+  };
+}
+
+export default function Accordion__({ accordionObj }: AccordionProps) {
+  const { description, reason, difficulties, features } = accordionObj;
+
   return (
     <Accordion>
       {/* Project Description Tab*/}
@@ -10,7 +23,7 @@ export default function Accordion__() {
         <Accordion.Title>Project Description</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>Project Description Placeholder text</p>
+            <p>{description}</p>
           </p>
         </Accordion.Content>
       </Accordion.Panel>
@@ -20,7 +33,7 @@ export default function Accordion__() {
         <Accordion.Title>Why did I build this project?</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>Build Difficulties? Placeholder text</p>
+            <p>{reason}</p>
           </p>
         </Accordion.Content>
       </Accordion.Panel>
@@ -30,7 +43,7 @@ export default function Accordion__() {
         <Accordion.Title>Build Difficulties?</Accordion.Title>
         <Accordion.Content>
           <p className="mb-2 text-gray-500 dark:text-gray-400">
-            <p>Build Difficulties? Placeholder text</p>
+            <p>{difficulties}</p>
           </p>
         </Accordion.Content>
       </Accordion.Panel>
