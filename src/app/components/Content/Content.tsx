@@ -22,7 +22,7 @@ const Content = ({ data }: ContentProps) => {
       {/* SKILL LIST */}
       <TechnologyList list={technologyList} />
 
-      <div className="flex flex-col justify-between- b  flex-grow">
+      <div className="flex flex-col  flex-grow">
         {/* PROJECT DESCRIPTION */}
         <Description text={description} />
 

@@ -11,11 +11,10 @@ interface ProjectProps {
 const Project = ({ data }: ProjectProps) => {
   // console.log("data: ", data);
   const { image } = data;
-  console.log("image: ", image);
+
   return (
     // <div className="text-white border-[3px] border-white rounded-lg overflow-hidden">
-    <div className="text-white b max-w-[600px]">
-      {/* TODO - TEMPORARY - Pass in image list after adding images to our constants index file */}
+    <div className="text-white max-w-[600px]">
       {/* <LaptopMockup imageList={imageList} /> */}
       {data.image && <LaptopMockup image={data.image} />}
       {/* Container with all text about the project */}
