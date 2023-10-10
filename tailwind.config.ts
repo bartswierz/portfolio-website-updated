@@ -19,11 +19,16 @@ const config: Config = {
       // TODO - add custom colors as we go along to avoid having to change color in multiple places in the future
       backgroundColor: {
         primary: "#252839",
+        hover: "#ffb700",
         technology: "#ffb700",
       },
       textColor: {
         primary: "#333",
+        hover: "#333",
         dark: "#ffb700",
+      },
+      borderColor: {
+        primary: "#ffb700",
       },
     },
   },

@@ -8,6 +8,7 @@ import ProjectList from "./components/ProjectList";
 import { PersonalProjectList, WorkProjectList } from "./constants";
 import ProjectHeading from "./components/ProjectHeading";
 import TechnologiesList from "./components/TechnologiesList";
+import ContactForm from "./components/ContactForm";
 
 export default function Home() {
   return (
@@ -27,7 +28,8 @@ export default function Home() {
       <ProjectList list={PersonalProjectList} />
 
       {/* CONTACT */}
-      <div id="contact">Contact</div>
+      <div id="contact"></div>
+      <ContactForm />
     </main>
   );
 }
