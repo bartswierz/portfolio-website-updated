@@ -1,8 +1,8 @@
 const About = () => {
   return (
-    <div className="dark:text-white max-w-[868px]">
-      <h2 className="text-2xl font-bold text-center my-2">About Me</h2>
-      <p className="leading-relaxed text-xl">
+    <div className="dark:text-white max-w-[868px]- max-w-[700px] text-center md:text-start mx-4 md:mx-0">
+      <h2 className="text-2xl md:text-3xl font-bold text-center my-2">About Me</h2>
+      <p className="leading-relaxed text-[18px] md:text-[24px]">
         I&apos;m a <span className="dark:text-dark">Front-end Developer</span> with
         <span className="dark:text-dark"> full stack capabilities</span> currently working at a
         <span className="dark:text-dark"> public health non-profit organization</span>. I&apos;m a recent
