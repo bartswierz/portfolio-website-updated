@@ -41,6 +41,7 @@ const alphaFootwearProject: ProjectData = {
     "A modern user-friendly E-commerce web application containing a wide selection of footwear. All product data and user authentication is stored on the back-end utilizing our Firebase Database. The web application is built with scalability in mind and can easily accomodate more products without further configuration.",
   liveURL: "https://alpha-footwear.netlify.app/",
   githubURL: "https://github.com/bartswierz/shopping-website",
+  image: "/assets/NLG-browse-genre.png",
   accordionObj: {
     description:
       "Alpha Footwear is the solution for getting top quality footwear without breaking the bank. Customers will enjoy and appreciate a minimalist layout without overwhelming distractions cluttering the screen. The user experience was the push for keeping the layout as minimal as possible without compromising other sections.",
@@ -68,6 +69,7 @@ const trailHawkProject: ProjectData = {
     "If youre an avid hiker or just looking for a new adventure, Trailhawk is the perfect app for you. Trailhawk lets you discover the best of the U.S. State Parks and National Parks. From casual hiking trails to treks spanning over 2000 miles, Trailhawk has you covered.",
   liveURL: "https://trailhawk.netlify.app/",
   githubURL: "https://github.com/bartswierz/map-search",
+  image: "/assets/NLG-browse-genre.png",
   accordionObj: {
     description:
       "This Trailhawk web application is a map app built using React, Tailwind CSS, React-Leaflet, and Google Maps API. The app allows users to search for hiking trails and state parks in the United States with an autocomplete matching user input by filtering through our current 27 locations across the United States. The app is built with scalability in mind and can easily accomodate more data without further configuration. The app is deployed on Netlify and the code is hosted on GitHub.",
@@ -95,6 +97,7 @@ const polarisProject: ProjectData = {
     'MERN stack application containing employee record data with CRUD functionality. If you would like to run the application, please navigate to my github repository using the button below and read the "Getting Started" section of the documentation to set up your very own MongoDB and local environment!',
   // liveURL: "",
   githubURL: "https://github.com/bartswierz/employee-records",
+  image: "/assets/NLG-browse-genre.png",
   accordionObj: {
     description:
       "The Polaris application is database management system built using the MERN stack (MongoDB, Express.js, Node.js, and React) that provides comprehensive CRUD (Create, Read, Update, Delete) functionality for managing employee data. My MERN stack application features a captivating space theme that adds an immersive and visually stunning experience for users. The highlight of this theme is an animated star background that gracefully traverses across the screen, creating a sense of movement and depth reminiscent of a space voyage.",
@@ -118,6 +121,7 @@ const civilienceProject: ProjectData = {
     'As a Front-end co-team lead at Civilience, I collaborated closely with the UI/UX Design team to build a complex health tracker web application from scratch by translating Figma designs into working code. The app is intended to be used by communities across the US to help them understand their emotional health. To see the app, click "View App" below, sign up, and then click the "Learn More" button within the Emotional Health tab.',
   liveURL: "https://www.civilience.app/",
   githubURL: "https://civilience.social/solutions/",
+  image: "/assets/NLG-browse-genre.png",
   accordionObj: {
     description:
       "This service helps users understand their emotional health by guiding them through a questionnaire and process screens to align their feelings and actions. It also provides community insights based on zipcode.",
