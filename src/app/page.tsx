@@ -7,6 +7,7 @@ import Project from "./components/Project";
 import ProjectList from "./components/ProjectList";
 import { PersonalProjectList, WorkProjectList } from "./constants";
 import ProjectHeading from "./components/ProjectHeading";
+import TechnologiesList from "./components/TechnologiesList";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
 
       <div id="about"></div>
       <About />
+      <TechnologiesList />
 
       <div id="work"></div>
       {/* <ProjectHeading text="Work Projects" />

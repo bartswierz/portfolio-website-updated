@@ -1,6 +1,4 @@
 import { ProjectData } from "../../types";
-import Modal from "./Modal";
-import Button from "../Button";
 import Description from "./Description";
 import TechnologyList from "./TechnologyList";
 import ContentButtons from "./ContentButtons";
