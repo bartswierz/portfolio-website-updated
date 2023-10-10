@@ -8,6 +8,7 @@ import Providers from "./providers";
 import ThemeSwitcher from "./components/ThemeSwitcher";
 import "flowbite";
 import { Poppins } from "next/font/google";
+import Footer from "./components/Footer";
 // const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -31,6 +32,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         {/* <ThemeSwitcher /> */}
         {children}
         {/* </Providers> */}
+        <Footer />
       </body>
     </html>
   );
