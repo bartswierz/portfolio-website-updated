@@ -14,7 +14,10 @@ const Navbar_ = () => {
         {/* <button>Get started</button> */}
         <Navbar.Toggle />
       </div>
+      {/* NAV LINKS */}
       <Navbar.Collapse>
+        {/* <div className="flex items-center justify-center"> */}
+        {/* <div className="text-center text-middle vertical-align align-vertical"> */}
         <Navbar.Link active href="#work">
           <p>Work Projects</p>
         </Navbar.Link>
@@ -22,6 +25,12 @@ const Navbar_ = () => {
         <Navbar.Link href="#about">About</Navbar.Link>
         <Navbar.Link href="#contact">Contact</Navbar.Link>
         <Navbar.Link href="#">Resume</Navbar.Link>
+        <Navbar.Link href="#">
+          <Flowbite>
+            <DarkThemeToggle />
+          </Flowbite>
+        </Navbar.Link>
+        {/* </div> */}
       </Navbar.Collapse>
     </Navbar>
   );

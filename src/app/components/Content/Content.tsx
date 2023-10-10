@@ -15,7 +15,7 @@ const Content = ({ data }: ContentProps) => {
   const { header, subheader, technologyList, description, liveURL, githubURL, accordionObj } = data;
 
   return (
-    <div className="p-3  bg-primary">
+    <div className="p-3  bg-primary border-[3px] border-white rounded-lg overflow-hidden">
       {/* HEADER - App name and short subheading*/}
       <Heading header={header} subheader={subheader} />
 
