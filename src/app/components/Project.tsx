@@ -14,7 +14,7 @@ const Project = ({ data }: ProjectProps) => {
   console.log("image: ", image);
   return (
     // <div className="text-white border-[3px] border-white rounded-lg overflow-hidden">
-    <div className="text-white ">
+    <div className="text-white b max-w-[600px]">
       {/* TODO - TEMPORARY - Pass in image list after adding images to our constants index file */}
       {/* <LaptopMockup imageList={imageList} /> */}
       {data.image && <LaptopMockup image={data.image} />}

@@ -10,9 +10,11 @@ interface ProjectListProps {
 const ProjectList = ({ list }: ProjectListProps) => {
   // console.log("list", list);
   return (
-    <div className="flex flex-col w-full max-w-[1000px] gap-12 text-white">
-      {list.map((project) => (
-        <Project data={project} key={project.id} />
+    <div className="grid grid-cols-1 xl:grid-cols-2 w-full max-w-[1400px] gap-12 text-white justify-items-center b">
+      {list.map((project, index) => (
+        <div key={project.id} className={`relative ${index === list.length - 1 ? "xl:col-span-2 xl:justify-self-center" : ""}`}>
+          <Project data={project} key={project.id} />
+        </div>
       ))}
     </div>
   );

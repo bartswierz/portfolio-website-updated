@@ -17,11 +17,11 @@ export default function Home() {
       <About />
 
       <div id="work"></div>
-      <ProjectHeading text="Work Projects" />
-      <ProjectList list={WorkProjectList} />
+      {/* <ProjectHeading text="Work Projects" />
+      <ProjectList list={WorkProjectList} /> */}
 
       <div id="personal"></div>
-      <ProjectHeading text="Personal Projects" />
+      {/* <ProjectHeading text="Personal Projects" /> */}
       <ProjectList list={PersonalProjectList} />
 
       {/* CONTACT */}

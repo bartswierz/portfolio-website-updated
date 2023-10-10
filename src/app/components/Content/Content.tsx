@@ -15,7 +15,7 @@ const Content = ({ data }: ContentProps) => {
   const { header, subheader, technologyList, description, liveURL, githubURL, accordionObj } = data;
 
   return (
-    <div className="p-3  bg-primary border-[3px] border-white rounded-lg overflow-hidden">
+    <div className="p-3  bg-primary border-[3px] border-white rounded-lg overflow-hidden max-w-[600px] min-h-[359px]">
       {/* HEADER - App name and short subheading*/}
       <Heading header={header} subheader={subheader} />
 
@@ -24,11 +24,15 @@ const Content = ({ data }: ContentProps) => {
       {/* SKILL LIST */}
       <TechnologyList list={technologyList} />
 
-      {/* PROJECT DESCRIPTION */}
-      <Description text={description} />
+      <div className="flex flex-col justify-between- b  flex-grow">
+        {/* PROJECT DESCRIPTION */}
+        <Description text={description} />
 
-      {/* PROJECT BUTTON LINKS - Live Site, Company and/or Github link, and Project Description(modal) */}
-      <ContentButtons liveURL={liveURL} githubURL={githubURL} accordionObj={accordionObj} />
+        {/* PROJECT BUTTON LINKS - Live Site, Company and/or Github link, and Project Description(modal) */}
+        <div className="flex-shrink-0">
+          <ContentButtons liveURL={liveURL} githubURL={githubURL} accordionObj={accordionObj} />
+        </div>
+      </div>
     </div>
   );
 };

@@ -18,8 +18,8 @@ const LaptopMockup = ({ image }: LaptopMockupProps) => {
           <img
             // src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png"
             src={image}
-            className="hidden- dark:block- h-[156px] md:h-[278px] w-full rounded-lg-"
-            alt=""
+            className="hidden- dark:block- h-[156px] md:h-[278px] w-full rounded-lg- object-center"
+            alt="Laptop Mockup"
           />
         </div>
       </div>
