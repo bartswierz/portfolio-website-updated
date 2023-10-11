@@ -3,7 +3,7 @@ import { useState, useEffect, FormEvent } from "react";
 import { Label, TextInput, Textarea } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
-
+import Toast_ from "./Toast";
 //REFERENCE VIDEO FOR nodemailer setup: https://www.youtube.com/watch?v=6DAozN-qxr0
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
@@ -70,15 +70,20 @@ const ContactForm = () => {
       setLoading(false);
 
       //reset the form
-      // event.target.name.value = "";
-      // event.target.email.value = "";
-      // event.target.message.value = "";
       setName("");
       setEmail("");
       setMessage("");
+      // <Toast_ />;
     }
 
     if (!response.ok) {
+      const error = await response.json();
+
+      if (error.message) {
+        // TODO - add a toast
+        // Toast(error message)
+        // <Toast_ />;
+      }
       console.log("Error sending message");
       setLoading(false);
     }

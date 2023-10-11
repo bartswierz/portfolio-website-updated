@@ -3,60 +3,128 @@
 @tailwind utilities;
 
 :root {
-  --background-color: #3123dd;
-  --color: #3123dd;
+  /* --background-color: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  --color: #3123dd; */
+  /* --background-color: #3123dd;
+  --color: #3123dd; */
 }
 
 /* SMOOTH SCROLLING */
 html {
   scroll-behavior: smooth;
+  /* TODO - temporary remove once we work on dark/light color schemes */
+  /* background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  background-size: 125% 125%;
+  animation: gradient 10s ease infinite;
+  -moz-animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
+  -o-animation: gradient 10s ease infinite;
+  -ms-animation: gradient 10s ease infinite; */
 }
 
 [data-theme="dark"],
-[data-theme="dark"] {
-  --background-color: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+[data-theme="dark"] body,
+[data-theme="dark"] html {
+  /* background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  background-size: 125% 125%;
+  animation: gradient 10s ease infinite;
+  -moz-animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
+  -o-animation: gradient 10s ease infinite;
+  -ms-animation: gradient 10s ease infinite; */
+  /* background-size: 400% 400%; */
+  /* --background-color: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92); */
   /* background-color: #000;
   color: #12adaa; */
 }
-/* [data-theme="dark"] html,
-[data-theme="dark"] body {
-  background-color: #000;
-  color: #12adaa;
-} */
 
 .b {
   border: 2px solid blue;
 }
 
 body {
-  --color: var(--background-color);
-  --background-color: var(--text-color);
+  /* --color: var(--background-color);
+  --background-color: var(--text-color); */
+  /* --color: var(--text-color);
+  --background-color: var(--background-color); */
+  /* background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  background-size: 125% 125%;
+  animation: gradient 10s ease infinite;
+  -moz-animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
+  -o-animation: gradient 10s ease infinite;
+  -ms-animation: gradient 10s ease infinite; */
   /* --color: #000;
   --background-color: #fff; */
+  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  background-size: 125% 125%;
+  animation: gradient 10s ease infinite;
+  -moz-animation: gradient 10s ease infinite;
+  -webkit-animation: gradient 10s ease infinite;
+  -o-animation: gradient 10s ease infinite;
+  -ms-animation: gradient 10s ease infinite;
 }
 
-/* :root {
-  --background-color: #fff;
-  --color: #000;
-} */
+/* Style for the scrollbar  */
+::-webkit-scrollbar {
+  width: 15px; /* width of the scrollbar */
+}
 
-/* body {
-  color: #000;
-  background-color: #fff;
-} */
+/* Style for the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #e3a812;
+  border-radius: 50px;
+}
 
-/* [data-theme="dark"] html,
-[data-theme="dark"] body {
-  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92); */
-/* background-color: #000;
-  color: #12adaa; */
-/* } */
-/* [data-theme="dark"] html,
-[data-theme="dark"] body {
-  background-color: #000;
-  color: #12adaa;
-} */
+/* Style for the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: rgba(37, 40, 57);
+}
 
-/* .b {
-  border: 2px solid blue;
-} */
+/* Style for the scrollbar */
+::-moz-scrollbar {
+  width: 15px; /* width of the scrollbar */
+}
+
+/* Style for the scrollbar thumb */
+::-moz-scrollbar-thumb {
+  background-color: #e3a812;
+  border-radius: 50px;
+}
+
+/* Style for the scrollbar track */
+::-moz-scrollbar-track {
+  background-color: rgba(37, 40, 57);
+}
+
+/* Style for the scrollbar */
+::-ms-scrollbar {
+  width: 15px; /* width of the scrollbar */
+}
+
+/* Style for the scrollbar thumb */
+::-ms-scrollbar-thumb {
+  background-color: #e3a812;
+  border-radius: 50px;
+}
+
+/* Style for the scrollbar track */
+::-ms-scrollbar-track {
+  background-color: rgba(37, 40, 57);
+}
+
+/* Style for the scrollbar */
+::-o-scrollbar {
+  width: 15px; /* width of the scrollbar */
+}
+
+/* Style for the scrollbar thumb */
+::-o-scrollbar-thumb {
+  background-color: #e3a812;
+  border-radius: 50px;
+}
+
+/* Style for the scrollbar track */
+::-o-scrollbar-track {
+  background-color: rgba(37, 40, 57);
+}

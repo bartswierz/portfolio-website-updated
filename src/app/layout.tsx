@@ -26,7 +26,7 @@ const poppins = Poppins({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark text-primary">
-      <body className={`${poppins.className} bg-gray-300 dark:bg-slate-900`}>
+      <body className={`${poppins.className} bg-gray-200 dark:from-slate-800- dark:bg-slate-900 `}>
         <Navbar_ />
         {/* <Providers> */}
         {/* <ThemeSwitcher /> */}

@@ -4,8 +4,8 @@ import IconLink from "./IconLink";
 // Reference: https://flowbite.com/docs/components/jumbotron/
 const Hero = () => {
   return (
-    <section className="dark:bg-gray-900">
-      <div className="b py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
+    <section className="b w-full min-h-screen flex items-center justify-center">
+      <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
         <h1 className="mb-4 text-4xl font-extrabold tracking-tight leading-none  md:text-5xl lg:text-6xl dark:text-dark">
           Bartosz Swierzynski
           {/* Who you gonna call? GHOST BOO-STERS */}
@@ -26,13 +26,14 @@ const Hero = () => {
         </ul>
 
         {/* BUTTONS - PROJECT/ABOUT */}
-        <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
+        {/* <div className="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4">
           <div id="work"></div>
           <Button text="Projects" buttonType="primary" link="#" />
 
           <div id="about"></div>
           <Button text="About" buttonType="secondary" link="#" />
-        </div>
+        </div> */}
+        {/* TODO - add  */}
       </div>
     </section>
   );
