@@ -24,7 +24,9 @@ const Navbar_ = () => {
         <Navbar.Link href="#personal">Personal Projects</Navbar.Link>
         <Navbar.Link href="#about">About</Navbar.Link>
         <Navbar.Link href="#contact">Contact</Navbar.Link>
-        <Navbar.Link href="#">Resume</Navbar.Link>
+        <Navbar.Link href="./files/Bartosz_Swierzynski.pdf" target="_blank">
+          Resume
+        </Navbar.Link>
       </Navbar.Collapse>
     </Navbar>
   );
