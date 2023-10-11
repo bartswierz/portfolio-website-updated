@@ -6,6 +6,8 @@ import { BsFillPersonFill } from "react-icons/bs";
 
 //REFERENCE VIDEO FOR nodemailer setup: https://www.youtube.com/watch?v=6DAozN-qxr0
 const ContactForm = () => {
+  const [loading, setLoading] = useState(false);
+
   // emailjs.init(process.env.publicKey);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -41,6 +43,7 @@ const ContactForm = () => {
   // const handleSubmit = async (e: FormEvent) => {
   const handleSubmit = async (event: any) => {
     event.preventDefault();
+    setLoading(true);
     // console.log("user submitted form");
     // console.log("data: ", { name, email, message });
 
@@ -64,27 +67,21 @@ const ContactForm = () => {
 
     if (response.ok) {
       console.log("Message sent successfully");
+      setLoading(false);
+
+      //reset the form
+      // event.target.name.value = "";
+      // event.target.email.value = "";
+      // event.target.message.value = "";
+      setName("");
+      setEmail("");
+      setMessage("");
     }
 
     if (!response.ok) {
       console.log("Error sending message");
+      setLoading(false);
     }
-    // Passing our form data to our api route
-    // try {
-    //   const res = await fetch("/api/contact", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       name,
-    //       email,
-    //       message,
-    //     }),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-    // } catch (err: any) {
-    //   console.error("Err", err);
-    // }
   };
 
   return (
@@ -102,6 +99,7 @@ const ContactForm = () => {
             placeholder="Michael Scott"
             required
             onChange={(e) => setName(e.target.value)}
+            value={name}
           />
         </div>
 
@@ -117,6 +115,7 @@ const ContactForm = () => {
             required
             type="email"
             onChange={(e) => setEmail(e.target.value)}
+            value={email}
           />
         </div>
 
@@ -125,7 +124,14 @@ const ContactForm = () => {
           <div className="mb-2 block">
             <Label htmlFor="comment" value="Leave a message (optional)" className="font-semibold text-white" />
           </div>
-          <Textarea id="comment" placeholder="Leave a comment..." required rows={4} onChange={(e) => setMessage(e.target.value)} />
+          <Textarea
+            id="comment"
+            placeholder="Leave a comment..."
+            required
+            rows={4}
+            onChange={(e) => setMessage(e.target.value)}
+            value={message}
+          />
         </div>
       </div>
 
@@ -133,7 +139,9 @@ const ContactForm = () => {
       <div className="flex justify-center items-center mt-4">
         <button
           type="submit"
-          className="text-dark w-[80%] py-2 bg-transparent rounded-full border-2 border-primary font-semibold hover:bg-hover hover:text-hover transition-all duration-300 ease-in-out"
+          // When its loading, we will make the button gray and disable it
+          disabled={loading}
+          className="text-dark w-[80%] py-2 bg-transparent rounded-full border-2 border-primary font-semibold hover:bg-hover hover:text-hover transition-all duration-300 ease-in-out disabled:bg-gray-400 disabled:text-gray-100"
         >
           Submit
         </button>
