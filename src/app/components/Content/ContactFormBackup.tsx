@@ -5,7 +5,7 @@ import { HiMail } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
 
 //REFERENCE VIDEO FOR nodemailer setup: https://www.youtube.com/watch?v=6DAozN-qxr0
-const ContactForm = () => {
+const ContactFormBackup = () => {
   // emailjs.init(process.env.publicKey);
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -15,76 +15,27 @@ const ContactForm = () => {
   // console.log("email: ", email);
   // console.log("message: ", message);
 
-  // const handleSubmit = async (e: FormEvent) => {
-  //   e.preventDefault();
-  //   // console.log("user submitted form");
-  //   // console.log("data: ", { name, email, message });
-
-  //   // Passing our form data to our api route
-  //   try {
-  //     const res = await fetch("/api/contact", {
-  //       method: "POST",
-  //       body: JSON.stringify({
-  //         name,
-  //         email,
-  //         message,
-  //       }),
-  //       headers: {
-  //         "Content-Type": "application/json",
-  //       },
-  //     });
-  //   } catch (err: any) {
-  //     console.error("Err", err);
-  //   }
-  // };
-
-  // const handleSubmit = async (e: FormEvent) => {
-  const handleSubmit = async (event: any) => {
-    event.preventDefault();
+  const handleSubmit = async (e: FormEvent) => {
+    e.preventDefault();
     // console.log("user submitted form");
     // console.log("data: ", { name, email, message });
 
-    const data = {
-      name: name,
-      email: email,
-      message: message,
-      // name: String(event.target.name.value),
-      // email: String(event.target.email.value),
-      // message: String(event.target.message.value),
-    };
-
-    console.log("data: ", data);
-    const response = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (response.ok) {
-      console.log("Message sent successfully");
-    }
-
-    if (!response.ok) {
-      console.log("Error sending message");
-    }
     // Passing our form data to our api route
-    // try {
-    //   const res = await fetch("/api/contact", {
-    //     method: "POST",
-    //     body: JSON.stringify({
-    //       name,
-    //       email,
-    //       message,
-    //     }),
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //     },
-    //   });
-    // } catch (err: any) {
-    //   console.error("Err", err);
-    // }
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify({
+          name,
+          email,
+          message,
+        }),
+        headers: {
+          "Content-Type": "application/json",
+        },
+      });
+    } catch (err: any) {
+      console.error("Err", err);
+    }
   };
 
   return (
@@ -142,4 +93,4 @@ const ContactForm = () => {
   );
 };
 
-export default ContactForm;
+export default ContactFormBackup;
