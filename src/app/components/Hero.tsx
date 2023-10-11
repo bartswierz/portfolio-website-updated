@@ -1,9 +1,4 @@
 import Button from "./Button";
-import { BsLinkedin, BsGithub } from "react-icons/bs";
-import { AiFillMail } from "react-icons/ai";
-import Link from "next/link";
-import { GrMailOption } from "react-icons/gr";
-import { FiMail } from "react-icons/fi";
 import IconLink from "./IconLink";
 
 // Reference: https://flowbite.com/docs/components/jumbotron/
@@ -25,24 +20,6 @@ const Hero = () => {
 
         {/* LINKS */}
         <ul className="text-dark flex flex-row justify-center items-center gap-2 mb-2">
-          <Link href={"https://github.com/bartswierz"} target="_blank">
-            <div className="flex justify-center items-center">
-              <BsGithub size={26} />
-            </div>
-            <span className="text-[12px]">Github</span>
-          </Link>
-          <Link href={"https://www.linkedin.com/in/bartosz-swierzynski/"} target="_blank">
-            <div className="flex justify-center items-center">
-              <BsLinkedin size={26} />
-            </div>
-            <span className="text-[12px]">LinkedIn</span>
-          </Link>
-          <Link href={"https://www.linkedin.com/in/bartosz-swierzynski/"} target="_blank">
-            <div className="flex justify-center">
-              <FiMail size={26} />
-            </div>
-            <span className="text-[12px] pt-0">Contact</span>
-          </Link>
           <IconLink linkType="linkedin" />
           <IconLink linkType="github" />
           <IconLink linkType="contact" />

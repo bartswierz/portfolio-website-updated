@@ -2,13 +2,13 @@ import Link from "next/link";
 import { AiFillFilePdf } from "react-icons/ai";
 import { BsLinkedin, BsGithub } from "react-icons/bs";
 import { FiMail } from "react-icons/fi";
-
+import { CgUnavailable } from "react-icons/cg";
 interface IconLinkProps {
-  linkType: string;
+  linkType: "github" | "linkedin" | "resume" | "contact";
 }
 
 const IconLink = ({ linkType = "github" }: IconLinkProps) => {
-  let icon: string;
+  let icon: JSX.Element;
   let text: string;
   let path: string;
 
@@ -33,9 +33,12 @@ const IconLink = ({ linkType = "github" }: IconLinkProps) => {
       text = "Contact";
       path = "#contact";
       break;
-    default:
-      icon = null;
-      text = "Unknown";
+    default: //setting default to contact form
+      break;
+  }
+
+  if (linkType !== "contact" && linkType !== "resume" && linkType !== "linkedin" && linkType !== "github") {
+    return null;
   }
 
   // IF CONTACT, USER LINK TO SCROLL DOWN TO OUR CONTACT FORM
