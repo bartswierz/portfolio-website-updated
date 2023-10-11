@@ -4,6 +4,8 @@ import { AiFillMail } from "react-icons/ai";
 import Link from "next/link";
 import { GrMailOption } from "react-icons/gr";
 import { FiMail } from "react-icons/fi";
+import IconLink from "./IconLink";
+
 // Reference: https://flowbite.com/docs/components/jumbotron/
 const Hero = () => {
   return (
@@ -41,6 +43,9 @@ const Hero = () => {
             </div>
             <span className="text-[12px] pt-0">Contact</span>
           </Link>
+          <IconLink linkType="linkedin" />
+          <IconLink linkType="github" />
+          <IconLink linkType="contact" />
         </ul>
 
         {/* BUTTONS - PROJECT/ABOUT */}
