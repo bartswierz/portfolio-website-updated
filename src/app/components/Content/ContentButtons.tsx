@@ -2,13 +2,13 @@ import Button from "../Button";
 import Modal from "./Modal";
 
 interface ContentButtonsProps {
-  liveURL: string;
+  liveURL?: string;
   githubURL: string;
   accordionObj: {
     description: string;
     reason: string;
     difficulties: string;
-    learned: string;
+    learned?: string;
     contributions?: string[]; // for work projects
     features?: string[]; // for personal projects
   };

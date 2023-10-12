@@ -8,7 +8,7 @@ interface ModalProps {
     description: string;
     reason: string;
     difficulties: string;
-    learned: string;
+    learned?: string;
     contributions?: string[]; // for work projects
     features?: string[]; // for personal projects
   };

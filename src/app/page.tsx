@@ -1,12 +1,7 @@
-import Image from "next/image";
 import Hero from "./components/Hero";
-import CarouselDefault from "./components/Carousel";
 import About from "./components/About";
-import Modal from "./components/Content/Modal";
-import Project from "./components/Project";
 import ProjectList from "./components/ProjectList";
-import { PersonalProjectList, WorkProjectList } from "./constants";
-import ProjectHeading from "./components/ProjectHeading";
+import { PersonalProjectList } from "./constants";
 import TechnologiesList from "./components/TechnologiesList";
 import ContactForm from "./components/ContactForm";
 
