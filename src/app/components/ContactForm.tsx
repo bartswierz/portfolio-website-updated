@@ -90,10 +90,7 @@ const ContactForm = () => {
   };
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="border-[3px] border-white max-w-[550px] w-full bg-primary p-4 rounded-lg my-8 min-h-[410px]"
-    >
+    <form onSubmit={handleSubmit} className="border-[3px] border-white max-w-[550px] w-full bg-primary p-4 rounded-lg my-8 mx-4">
       <h2 className="text-white text-center text-2xl font-semibold">Contact Me</h2>
       <div className="flex flex-col justify-center items-center gap-2">
         {/* NAME INPUT */}
