@@ -28,6 +28,7 @@ const config: Config = {
       // },
       textColor: {
         primary: "#333",
+        highlight: "#ffb700",
         hover: "#333",
         dark: "#ffb700",
       },
