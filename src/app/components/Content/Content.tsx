@@ -27,10 +27,10 @@ const Content = ({ data }: ContentProps) => {
         <Description text={description} />
 
         {/* PROJECT BUTTON LINKS - Live Site, Company and/or Github link, and Project Description(modal) */}
-        {/* <div className="flex-shrink-0">
+        <div className="flex-shrink-0">
           <ContentButtons liveURL={liveURL && liveURL} githubURL={githubURL} accordionObj={accordionObj} />
-        </div> */}
-        <Button />
+        </div>
+        {/* <Button /> */}
       </div>
     </div>
   );

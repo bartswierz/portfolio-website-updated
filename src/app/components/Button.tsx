@@ -22,18 +22,7 @@ const Button = ({ text, buttonType, link }: ButtonProps) => {
       default:
         return "bg-orange-500";
     }
-    // switch (buttonType) {
-    //   case "primary":
-    //     return "bg-blue-500 hover:bg-blue-700 font-bold py-2 px-4 rounded text-black dark:text-white";
-    //   case "secondary":
-    //     return "bg-green-500 hover:bg-blue-700 font-bold py-2 px-4 rounded text-black dark:text-white";
-    //   case "link":
-    //     return "bg-red-500 hover:bg-blue-700 font-bold py-2 px-4 rounded text-black dark:text-white";
-    //   default:
-    //     return "bg-orange-500";
-    // }
   };
-  // buttonStyle(buttonType);
 
   // Live Site or View Code Button links - opens in a new tab
   if (buttonType === "link") {

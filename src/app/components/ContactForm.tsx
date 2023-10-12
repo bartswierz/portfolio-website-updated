@@ -90,7 +90,10 @@ const ContactForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className="border-[3px] border-white max-w-[550px] w-full bg-primary p-4 rounded-lg my-8 ">
+    <form
+      onSubmit={handleSubmit}
+      className="border-[3px] border-white max-w-[550px] w-full bg-primary p-4 rounded-lg my-8 min-h-[410px]"
+    >
       <h2 className="text-white text-center text-2xl font-semibold">Contact Me</h2>
       <div className="flex flex-col justify-center items-center gap-2">
         {/* NAME INPUT */}
@@ -125,7 +128,7 @@ const ContactForm = () => {
         </div>
 
         {/* TEXT AREA INPUT  */}
-        <div className="max-w-md w-full my-2" id="textarea">
+        <div className="max-w-md w-full my-2 " id="textarea">
           <div className="mb-2 block">
             <Label htmlFor="comment" value="Leave a message (optional)" className="font-semibold text-white" />
           </div>
@@ -136,6 +139,7 @@ const ContactForm = () => {
             rows={4}
             onChange={(e) => setMessage(e.target.value)}
             value={message}
+            className="min-h-[70px]"
           />
         </div>
       </div>
