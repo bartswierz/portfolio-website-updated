@@ -1,8 +1,8 @@
-interface TechnologyListProps {
+interface TechnologiesUsedProps {
   list: string[];
 }
 
-const TechnologyList = ({ list }: TechnologyListProps) => {
+const TechnologiesUsed = ({ list }: TechnologiesUsedProps) => {
   return (
     <ul className="flex justify-center items-center flex-wrap gap-2 font-bold text-xl my-4">
       {list.map((technology: string) => {
@@ -16,4 +16,4 @@ const TechnologyList = ({ list }: TechnologyListProps) => {
   );
 };
 
-export default TechnologyList;
+export default TechnologiesUsed;

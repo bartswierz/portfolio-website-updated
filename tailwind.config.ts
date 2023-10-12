@@ -19,6 +19,7 @@ const config: Config = {
       // TODO - add custom colors as we go along to avoid having to change color in multiple places in the future
       backgroundColor: {
         primary: "#252839",
+        brand: "#ffb700",
         hover: "#ffb700",
         technology: "#ffb700",
         // "bg-dark": "linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92)",
@@ -26,6 +27,7 @@ const config: Config = {
       // background: {
       //   dark: "linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92)",
       // },
+
       textColor: {
         primary: "#333",
         highlight: "#ffb700",
@@ -34,6 +36,7 @@ const config: Config = {
       },
       borderColor: {
         primary: "#ffb700",
+        brand: "#ffb700",
       },
     },
   },
