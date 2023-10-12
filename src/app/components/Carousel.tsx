@@ -1,8 +1,8 @@
-"use client";
+// "use client";
 
-// import { Carousel as Carousel_ } from "flowbite-react";
-import { Carousel } from "flowbite-react";
-import Image from "next/image";
+// // import { Carousel as Carousel_ } from "flowbite-react";
+// import { Carousel } from "flowbite-react";
+// import Image from "next/image";
 // import "flowbite";
 // import test from "../public/assets/NLG-browse-genre.png";
 // import { nlg_browse } from "../assets/NLG-browse-genre.png";
@@ -46,20 +46,20 @@ import Image from "next/image";
 // import { Carousel as Carousel_ } from "flowbite-react";
 
 // export default function Carousel() {
-export default function DefaultCarousel() {
-  return (
-    <div className="flex justify-center items-center flex-grow b w-full- w-[92vw] max-w-[1000px] max-h-[500px]">
-      {/* <Carousel slideInterval={5000} className="w-full h-full object-contain"> */}
-      <Carousel slideInterval={5000} className="h-full bg-green-500 h-max">
-        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-1.svg" className="w-full h-full object-contain" />
-        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-2.svg" className="w-full h-full object-contain" />
-        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-3.svg" className="w-full h-full object-contain" />
-        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-4.svg" className="w-full h-full object-contain" />
-        <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-5.svg" className="w-full h-full object-contain" />
-      </Carousel>
-    </div>
-  );
-}
+// export default function DefaultCarousel() {
+//   return (
+//     <div className="flex justify-center items-center flex-grow b w-full- w-[92vw] max-w-[1000px] max-h-[500px]">
+//       {/* <Carousel slideInterval={5000} className="w-full h-full object-contain"> */}
+//       <Carousel slideInterval={5000} className="h-full bg-green-500 h-max">
+//         <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-1.svg" className="w-full h-full object-contain" />
+//         <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-2.svg" className="w-full h-full object-contain" />
+//         <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-3.svg" className="w-full h-full object-contain" />
+//         <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-4.svg" className="w-full h-full object-contain" />
+//         <img alt="..." src="https://flowbite.com/docs/images/carousel/carousel-5.svg" className="w-full h-full object-contain" />
+//       </Carousel>
+//     </div>
+//   );
+// }
 
 // export default Carousel;
 

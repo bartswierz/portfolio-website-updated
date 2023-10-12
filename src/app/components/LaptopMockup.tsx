@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 interface LaptopMockupProps {
   image: string;
 }
@@ -15,12 +17,12 @@ const LaptopMockup = ({ image }: LaptopMockupProps) => {
             alt=""
           /> */}
           {/* DARK MODE */}
-          <img
-            // src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen-dark.png"
+          {/* <img
             src={image}
             className="h-[156px] md:h-[278px] w-full  object-center"
             alt="Laptop Mockup"
-          />
+          /> */}
+          <Image src={image} className="h-[156px] md:h-[278px] w-full  object-center" alt="Laptop Mockup" width={500} height={278} />
         </div>
       </div>
       <div className="relative mx-auto bg-gray-900 dark:bg-gray-700 rounded-b-xl rounded-t-sm h-[17px] max-w-[351px] md:h-[21px] md:max-w-[597px]  drop-shadow-2xl">
