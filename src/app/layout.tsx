@@ -25,15 +25,11 @@ const poppins = Poppins({
 // https://www.youtube.com/watch?v=optD7ns4ISQ - dark theme
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" className="dark text-primary">
+    <html lang="en" className="dark text-primary overflow-x-hidden">
       <body className={`${poppins.className} bg-gray-200 dark:from-slate-800- dark:bg-slate-900 `}>
         <Navbar_ />
-        {/* <Providers> */}
-        {/* <ThemeSwitcher /> */}
         {children}
-        {/* </Providers> */}
         <Footer />
-        {/* <script async src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script> */}
       </body>
     </html>
   );

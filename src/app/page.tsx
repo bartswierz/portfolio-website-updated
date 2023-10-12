@@ -15,9 +15,10 @@ export default function Home() {
     <main className="flex min-h-screen flex-col items-center p-4">
       <Hero />
 
-      <div id="about"></div>
-      <About />
-      <TechnologiesList />
+      <div id="about" className="b min-w-screen min-h-screen flex justify-center items-center flex-col">
+        <About />
+        <TechnologiesList />
+      </div>
 
       <div id="work"></div>
       {/* <ProjectHeading text="Work Projects" />
@@ -28,8 +29,9 @@ export default function Home() {
       <ProjectList list={PersonalProjectList} />
 
       {/* CONTACT */}
-      <div id="contact"></div>
-      <ContactForm />
+      <div id="contact" className="min-h-screen w-screen flex justify-center items-center b">
+        <ContactForm />
+      </div>
     </main>
   );
 }
