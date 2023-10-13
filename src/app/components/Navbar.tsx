@@ -5,7 +5,7 @@ import { DarkThemeToggle, Flowbite, Navbar } from "flowbite-react";
 const Navbar_ = () => {
   return (
     // <Navbar fluid rounded className="fixed z-[9999] w-full">
-    <Navbar fluid rounded className="fixed z-[9999] w-full">
+    <Navbar fluid rounded className="fixed z-[999] w-full">
       <Navbar.Brand href="https://flowbite-react.com">
         <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary hover:text-primary/80 dark:text-dark dark:hover:text-dark/70">
           &lt;BS /&gt;
@@ -29,7 +29,6 @@ const Navbar_ = () => {
           Resume
         </Navbar.Link>
       </Navbar.Collapse>
-      {/* <div className="absolute inset-x-0 bottom-0 h-1 glow w-[200px] bg-brand drop-shadow-2xl shadow-xl"></div> */}
     </Navbar>
   );
 };
