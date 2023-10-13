@@ -39,7 +39,7 @@ export default function Modal__({ accordionObj }: ModalProps) {
         target="_blank"
       > */}
         {/* GRAY SHAPE DESIGN */}
-        <span className="w-32- w-36 h-36 rotate-45 translate-x-12- translate-x-16 -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]- opacity-[53%]"></span>
+        <span className="w-[204px] h-[204px] rotate-45 translate-x-[40px] -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
 
         {/* LEFT TO RIGHT COLOR TRANSITION */}
         {/* <span className="absolute top-0 left-0 w-[216px] h-48- h-48 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-60 -translate-y-24 bg-brand opacity-100 group-hover:-translate-x-8- group-hover:-translate-x-0"></span> */}
