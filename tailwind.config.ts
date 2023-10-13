@@ -1,5 +1,6 @@
 import type { Config } from "tailwindcss";
 
+// ANIMATION PLUGIN CONFIGURATOR https://www.tailwindcss-animated.com/configurator.html
 const config: Config = {
   darkMode: "class",
   content: [
@@ -40,6 +41,6 @@ const config: Config = {
       },
     },
   },
-  plugins: [require("flowbite/plugin")],
+  plugins: [require("flowbite/plugin"), require("tailwindcss-animated")],
 };
 export default config;
