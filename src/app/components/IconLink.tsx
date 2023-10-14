@@ -5,9 +5,10 @@ import { FiMail } from "react-icons/fi";
 
 interface IconLinkProps {
   linkType: "github" | "linkedin" | "resume" | "contact";
+  animationDelay: string;
 }
 
-const IconLink = ({ linkType = "github" }: IconLinkProps) => {
+const IconLink = ({ linkType = "github", animationDelay = "2000ms" }: IconLinkProps) => {
   let icon: JSX.Element | null = null;
   let text: string | null = null;
   let path: string | null = null;
@@ -47,7 +48,7 @@ const IconLink = ({ linkType = "github" }: IconLinkProps) => {
     // IF CONTACT, USE LINK TO SCROLL DOWN TO OUR CONTACT FORM
     if (linkType === "contact") {
       return (
-        <Link href={path}>
+        <Link href={path} className={`animate-fade-down animate-once animate-duration-500 animate-delay-[${animationDelay}]`}>
           <div className="flex flex-col items-center group">
             <span className="group-hover:text-[#0072fe] transition-all duration-300">{icon}</span>
             <span className="text-sm">{text}</span>
@@ -57,7 +58,11 @@ const IconLink = ({ linkType = "github" }: IconLinkProps) => {
     } else {
       // NOT A CONTACT FORM, USE LINK TO OPEN LINK IN A NEW TAB
       return (
-        <Link href={path} target="_blank">
+        <Link
+          href={path}
+          target="_blank"
+          className={`animate-fade-down animate-once animate-duration-500 animate-delay-[2001ms]- animate-delay-[${animationDelay}]`}
+        >
           <div className="flex flex-col items-center group">
             <span className="group-hover:text-[#0072fe] transition-all duration-300">{icon}</span>
             <span className="text-sm">{text}</span>
