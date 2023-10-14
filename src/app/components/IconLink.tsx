@@ -48,8 +48,8 @@ const IconLink = ({ linkType = "github" }: IconLinkProps) => {
     if (linkType === "contact") {
       return (
         <Link href={path}>
-          <div className="flex flex-col items-center">
-            {icon}
+          <div className="flex flex-col items-center group">
+            <span className="group-hover:text-[#0072fe] transition-all duration-300">{icon}</span>
             <span className="text-sm">{text}</span>
           </div>
         </Link>
@@ -58,8 +58,8 @@ const IconLink = ({ linkType = "github" }: IconLinkProps) => {
       // NOT A CONTACT FORM, USE LINK TO OPEN LINK IN A NEW TAB
       return (
         <Link href={path} target="_blank">
-          <div className="flex flex-col items-center">
-            {icon}
+          <div className="flex flex-col items-center group">
+            <span className="group-hover:text-[#0072fe] transition-all duration-300">{icon}</span>
             <span className="text-sm">{text}</span>
           </div>
         </Link>

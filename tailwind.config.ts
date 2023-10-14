@@ -17,7 +17,6 @@ const config: Config = {
         // "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         // "gradient-conic": "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
-      // TODO - add custom colors as we go along to avoid having to change color in multiple places in the future
       backgroundColor: {
         primary: "#252839",
         brand: "#ffb700",
@@ -28,7 +27,6 @@ const config: Config = {
       // background: {
       //   dark: "linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92)",
       // },
-
       textColor: {
         primary: "#333",
         highlight: "#ffb700",
@@ -37,6 +35,7 @@ const config: Config = {
       },
       borderColor: {
         primary: "#ffb700",
+        secondary: "#0072fe",
         brand: "#ffb700",
       },
     },

@@ -19,7 +19,6 @@
 .DS_Store
 *.pem
 .env
-test.jsx
 
 # debug
 npm-debug.log*

@@ -1,7 +1,6 @@
 const About = () => {
   return (
-    // <div className="b">
-    <div className="dark:text-white max-w-[700px] text-center md:text-start mx-4 md:mx-0">
+    <div className="dark:text-white max-w-[700px] text-center md:text-start mx-4">
       <h2 className="text-2xl md:text-3xl font-bold text-center my-2">About Me</h2>
       <p className="leading-relaxed text-[18px] md:text-[24px]">
         I&apos;m a <span className="dark:text-dark">Front-end Developer</span> with
@@ -14,7 +13,6 @@ const About = () => {
         developer.
       </p>
     </div>
-    // </div>
   );
 };
 
