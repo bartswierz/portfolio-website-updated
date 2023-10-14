@@ -29,10 +29,10 @@ export default function Modal__({ accordionObj }: ModalProps) {
         <span className="w-[204px] h-[204px] rotate-45 translate-x-[40px] -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
 
         {/* LEFT TO RIGHT COLOR TRANSITION */}
-        <span className="absolute top-[-2px] left-0 w-52 h-52 -mt-1 transition-all duration-500 ease-in-out rotate-45 -translate-x-56x -translate-x-[246px] -translate-y-24 bg-white- bg-brand opacity-100 group-hover:-translate-x-8x group-hover:-translate-x-2"></span>
+        <span className="absolute top-[-2px] left-0 w-52 h-52 -mt-1 transition-all duration-[600ms] ease-in-out rotate-45 -translate-x-56x -translate-x-[246px] -translate-y-24 bg-white- bg-brand opacity-100 group-hover:-translate-x-8x group-hover:-translate-x-2"></span>
 
         {/* TEXT COLOR CHANGE ON HOVER */}
-        <span className="relative w-full text-left text-white transition-colors duration-200 ease-in-out group-hover:text-gray-900">
+        <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-gray-900">
           Project Description
         </span>
         <span className="absolute inset-0 border-2 border-white hover:border-primary rounded-lg"></span>

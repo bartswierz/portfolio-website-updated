@@ -24,7 +24,7 @@ export default function Home() {
       <ProjectList list={PersonalProjectList} />
 
       {/* CONTACT */}
-      <div id="contact" className="min-h-screen w-screen flex justify-center items-center b">
+      <div id="contact" className="min-h-screen w-screen flex justify-center items-center">
         <ContactForm />
       </div>
     </main>
