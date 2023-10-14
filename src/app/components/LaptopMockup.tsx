@@ -4,6 +4,7 @@ interface LaptopMockupProps {
   image: string;
 }
 
+// Laptop display for my projects - when laptop is within the window, we will 'flip' it up, and close it when it's out of the window
 const LaptopMockup = ({ image }: LaptopMockupProps) => {
   return (
     <div className="mb-6">
