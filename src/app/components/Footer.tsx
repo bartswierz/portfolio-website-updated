@@ -80,25 +80,35 @@ const Footer = () => {
         <IconLink linkType="linkedin" animationDelay={"500ms"} />
         <IconLink linkType="resume" animationDelay={"500ms"} />
       </ul>
-      <ul className="flex gap-2 justify-center py-2 list-none md:list-disc list-inside flex-wrap mx-2 flex-col md:flex-row text-center">
+      <ul className="flex gap-2 justify-center py-2 list-none md:list-disc list-inside flex-wrap mx-2 flex-col md:flex-row text-center transition-all">
         <li className="pr-2">
-          <Link href="#">Home</Link>
+          <Link href="#" className="hover:text-highlight duration-300">
+            Home
+          </Link>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#work">Work Projects</Link>
+          <Link href="#work" className="hover:text-highlight duration-300">
+            Work Projects
+          </Link>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#personal">Personal Projects</Link>
+          <Link href="#personal" className="hover:text-highlight duration-300">
+            Personal Projects
+          </Link>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#about">About</Link>
+          <Link href="#about" className="hover:text-highlight duration-300">
+            About
+          </Link>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#contact">Contact</Link>
+          <Link href="#contact" className="hover:text-highlight duration-300">
+            Contact
+          </Link>
         </li>
       </ul>
       <p className="text-center">BartoszSwierzynski.com © 2023 </p>
