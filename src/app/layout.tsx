@@ -26,10 +26,12 @@ const poppins = Poppins({
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en" className="dark text-primary overflow-x-hidden">
-      <body className={`${poppins.className} bg-gray-200 dark:from-slate-800- dark:bg-slate-900 `}>
+      <body className={`${poppins.className} bg-gray-200 dark:from-slate-800- dark:bg-slate-900`}>
         <Navbar_ />
         {children}
-        <Footer />
+        {/* <div className="absolute bottom-0 left-0 right-0 z-[-1]"> */}
+        {/* <Footer /> */}
+        {/* </div> */}
       </body>
     </html>
   );

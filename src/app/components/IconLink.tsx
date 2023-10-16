@@ -5,7 +5,7 @@ import { FiMail } from "react-icons/fi";
 
 interface IconLinkProps {
   linkType: "github" | "linkedin" | "resume" | "contact";
-  animationDelay: string;
+  animationDelay?: string;
 }
 
 const IconLink = ({ linkType = "github", animationDelay = "2000ms" }: IconLinkProps) => {

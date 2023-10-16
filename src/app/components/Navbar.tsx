@@ -16,12 +16,12 @@ const Navbar_ = () => {
           &lt;BS /&gt;
         </span>
       </Navbar.Brand>
-      <div className="flex md:order-2 gap-2">
+      {/* <div className="flex md:order-2 gap-2">
         <Flowbite>
           <DarkThemeToggle />
         </Flowbite>
         <Navbar.Toggle />
-      </div>
+      </div> */}
       {/* NAV LINKS */}
       <Navbar.Collapse>
         <Navbar.Link
