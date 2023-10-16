@@ -1,6 +1,22 @@
+"use client";
+import hasIntersected from "../utils/hasIntersected";
+import { useRef } from "react";
+import TechnologiesList from "./TechnologiesList";
 const About = () => {
+  const aboutIntersectionRef = useRef<HTMLDivElement>(null);
+  const aboutHasIntersected = hasIntersected(aboutIntersectionRef, 0.3);
+
   return (
-    <div className="dark:text-white max-w-[700px] text-center md:text-start mx-4">
+    // <div className="dark:text-white max-w-[700px] text-center md:text-start mx-4" ref={aboutHasIntersected}>
+    <div
+      className={`dark:text-white max-w-[700px] text-center md:text-start mx-4
+    ${
+      aboutHasIntersected
+        ? "animate-fade-in animate-once animate-duration-[500ms] animate-delay-[400ms] animate-ease-in transition-opacity opacity-100 duration-[500ms]"
+        : "opacity-0"
+    }`}
+      ref={aboutIntersectionRef}
+    >
       <h2 className="text-2xl md:text-3xl font-bold text-center my-2">About Me</h2>
       <p className="leading-relaxed text-[18px] md:text-[24px]">
         I&apos;m a <span className="dark:text-dark">Front-end Developer</span> with
@@ -12,6 +28,8 @@ const About = () => {
         genuinely loves to learn <span className="dark:text-dark">cutting-edge technologies</span> that elevate my skills as a
         developer.
       </p>
+
+      <TechnologiesList />
     </div>
   );
 };

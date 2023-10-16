@@ -1,6 +1,6 @@
 import { technologyIconsList } from "../constants";
 import Image from "next/image";
-// Displays the list of technologies that we currently know and/or familiar with
+// Displays the list of technologies that we currently know and/or familiar with within our About section
 const TechnologiesList = () => {
   return (
     <ul className="flex flex-row flex-wrap text-white justify-center my-8 max-w-[690px]">

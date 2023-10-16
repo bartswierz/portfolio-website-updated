@@ -16,7 +16,7 @@ export default function Home() {
 
         <div id="about" className="min-w-screen min-h-screen flex justify-center items-center flex-col">
           <About />
-          <TechnologiesList />
+          {/* <TechnologiesList /> */}
         </div>
 
         <div id="work"></div>
