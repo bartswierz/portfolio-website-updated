@@ -16,7 +16,7 @@ const Project = ({ data }: ProjectProps) => {
     // <div className="text-white border-[3px] border-white rounded-lg overflow-hidden">
     <div className="text-white max-w-[600px]">
       {/* <LaptopMockup imageList={imageList} /> */}
-      {data.image && <LaptopMockup image={data.image} />}
+      {image && <LaptopMockup image={image} />}
       {/* Container with all text about the project */}
       <Content data={data} />
     </div>

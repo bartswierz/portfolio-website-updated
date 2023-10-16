@@ -1,21 +1,61 @@
 "use client";
 import { DarkThemeToggle, Flowbite, Navbar } from "flowbite-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 const Navbar_ = () => {
   const [active, setActive] = useState("home");
 
+  // const [scrolling, setScrolling] = useState(false);
+  const [isScrollingDown, setIsScrollingDown] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+
+  useEffect(() => {
+    let previousScroll: number = 0;
+
+    // Function to handle scroll events
+    const handleScroll = () => {
+      // IF USER IS SCROLLING DOWN - HIDE NAVBAR
+      if (window.scrollY > previousScroll) {
+        previousScroll = window.scrollY;
+        // User is scrolling down
+        setIsScrollingDown(true);
+        setNavbarVisible(false);
+      } else {
+        //USER IS SCROLLING UP - DISPLAY NAVBAR
+        let previousScroll = window.scrollY;
+        setIsScrollingDown(false);
+        setNavbarVisible(true);
+      }
+    };
+
+    // Attach scroll event listener
+    window.addEventListener("scroll", handleScroll);
+
+    // Clean up the listener when the component unmounts
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   // on hover: underline will expand from the the left to the right
   const underlineStyle = "block max-w-0 group-hover:max-w-full transition-all duration-300 h-[3px] bg-brand";
 
+  // const navbarHidden = "translate-y-[-100%]";
+
+  // const navbarVisible = "translate-y-0";
+
   return (
     // <Navbar fluid rounded className="fixed z-[9999] w-full">
-    <Navbar fluid rounded className="fixed z-[999] w-full">
-      <Navbar.Brand href="https://flowbite-react.com">
-        <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary hover:text-primary/80 dark:text-dark dark:hover:text-dark/70">
-          &lt;BS /&gt;
-        </span>
-      </Navbar.Brand>
+    // <Navbar fluid rounded className="fixed z-[999] w-full">
+    <Navbar
+      fluid
+      rounded
+      className={`fixed z-[999] w-full transition-transform duration-300 ${isScrollingDown ? `translate-y-[-100%]` : `translate-y-0`}`}
+    >
+      <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary dark:text-dark cursor-default">
+        &lt;BS /&gt;
+      </span>
+
       {/* <div className="flex md:order-2 gap-2">
         <Flowbite>
           <DarkThemeToggle />

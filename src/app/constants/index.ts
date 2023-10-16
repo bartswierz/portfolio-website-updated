@@ -148,7 +148,7 @@ const civilienceProject: ProjectData = {
 
 // Place current and new projects into this array
 export const PersonalProjectList: ProjectData[] = [
-  civilienceProject,
+  // civilienceProject,
   nextLevelProject,
   alphaFootwearProject,
   trailHawkProject,
@@ -176,4 +176,4 @@ export const technologyIconsList = [
   { name: "NPM", iconPath: "/assets/npm-icon.svg" },
 ];
 
-// export const WorkProjectList: ProjectData[] = [civilienceProject];
+export const WorkProjectList: ProjectData[] = [civilienceProject];

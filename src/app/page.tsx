@@ -1,12 +1,18 @@
 import Hero from "./components/Hero";
 import About from "./components/About";
 import ProjectList from "./components/ProjectList";
-import { PersonalProjectList } from "./constants";
+import { PersonalProjectList, WorkProjectList } from "./constants";
 import TechnologiesList from "./components/TechnologiesList";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
+import Project from "./components/Project";
+import ProjectHeading from "./components/ProjectHeading";
 
 export default function Home() {
+  // console.log("work project list: ", WorkProjectList);
+  const workProject = WorkProjectList[0];
+
+  console.log("Work Project", workProject);
   return (
     // <main className="flex min-h-screen flex-col items-center p-4">
     // <main className="flex min-h-screen flex-col items-center">
@@ -19,12 +25,14 @@ export default function Home() {
           {/* <TechnologiesList /> */}
         </div>
 
-        <div id="work"></div>
-        {/* <ProjectHeading text="Work Projects" />
-      <ProjectList list={WorkProjectList} /> */}
+        {/* WORK PROJECTS */}
+        <div id="work" className="mt-8"></div>
+        <ProjectHeading text="Work Projects" />
+        <Project data={workProject} key={workProject.id} />
 
-        <div id="personal"></div>
-        {/* <ProjectHeading text="Personal Projects" /> */}
+        {/* PERSONAL PROJECTS */}
+        <div id="personal" className="mt-8"></div>
+        <ProjectHeading text="Personal Projects" />
         <ProjectList list={PersonalProjectList} />
 
         {/* CONTACT */}
