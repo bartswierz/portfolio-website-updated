@@ -11,14 +11,18 @@ interface LaptopMockupProps {
 const LaptopMockup = ({ image }: LaptopMockupProps) => {
   // const laptopIntersectionRef = useRef();
   const laptopIntersectionRef = useRef<HTMLDivElement>(null);
-  const isVisible = useIsIntersecting(laptopIntersectionRef);
+  const isVisible = useIsIntersecting(laptopIntersectionRef, 0.3);
 
   return (
     <div className="mb-6" ref={laptopIntersectionRef}>
       {/* LAPTOP SCREEN SECTION */}
       <div
         className={`relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px] 
-        ${isVisible ? "animate-flip-up animate-once animate-ease-in transition-opacity opacity-100 duration-[1000ms]" : "opacity-0"}`}
+        ${
+          isVisible
+            ? "animate-flip-up animate-once animate-ease-in transition-opacity opacity-100 duration-[1000ms]"
+            : "animate-flip-down animate-once animate-ease-in-out opacity-0"
+        }`}
       >
         <div className="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
           {/* LIGHT MODE */}
