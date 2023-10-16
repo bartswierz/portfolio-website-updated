@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import useIsIntersecting from "../utils/isIntersecting";
-import { useRef, useState, useEffect } from "react";
+import { useRef } from "react";
 
 interface LaptopMockupProps {
   image: string;

@@ -18,7 +18,7 @@ export default function useIsIntersecting(ref, threshold) {
     return () => {
       observer.disconnect();
     };
-  }, [ref]);
+  }, [ref, threshold]);
 
   return isIntersecting;
 }
