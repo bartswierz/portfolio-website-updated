@@ -1,4 +1,7 @@
+"use client";
 import Image from "next/image";
+import useIsIntersecting from "../utils/isIntersecting";
+import { useRef, useState, useEffect } from "react";
 
 interface LaptopMockupProps {
   image: string;
@@ -6,10 +9,19 @@ interface LaptopMockupProps {
 
 // Laptop display for my projects - when laptop is within the window, we will 'flip' it up, and close it when it's out of the window
 const LaptopMockup = ({ image }: LaptopMockupProps) => {
+  // const laptopIntersectionRef = useRef();
+  const laptopIntersectionRef = useRef<HTMLDivElement>(null);
+  const isVisible = useIsIntersecting(laptopIntersectionRef);
+
   return (
-    <div className="mb-6">
+    <div className="mb-6" ref={laptopIntersectionRef}>
       {/* LAPTOP SCREEN SECTION */}
-      <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px] animate-flip-up animate-once animate-ease-in">
+      {/* <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px] animate-flip-up animate-once animate-ease-in"> */}
+      <div
+        className={`relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px] animate-flip-up animate-once animate-ease-in transition-opacity ease-in duration-700 ${
+          isVisible ? "opacity-100" : "opacity-0"
+        }`}
+      >
         <div className="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
           {/* LIGHT MODE */}
           {/* <img
@@ -43,3 +55,32 @@ const LaptopMockup = ({ image }: LaptopMockupProps) => {
 };
 
 export default LaptopMockup;
+
+/*
+<div className="mb-6">
+      {/* LAPTOP SCREEN SECTION */
+// <div className="relative mx-auto border-gray-800 dark:border-gray-800 bg-gray-800 border-[8px] rounded-t-xl h-[172px] max-w-[301px] md:h-[294px] md:max-w-[512px] animate-flip-up animate-once animate-ease-in">
+//   <div className="rounded-lg overflow-hidden h-[156px] md:h-[278px] bg-white dark:bg-gray-800">
+//     {/* LIGHT MODE */}
+//     {/* <img
+//       src={image}
+//       // src="https://flowbite.s3.amazonaws.com/docs/device-mockups/laptop-screen.png"
+//       className="dark:hidden h-[156px] md:h-[278px] w-full rounded-xl-"
+//       alt=""
+//     /> */}
+//     {/* DARK MODE */}
+//     {/* <img
+//       src={image}
+//       className="h-[156px] md:h-[278px] w-full  object-center"
+//       alt="Laptop Mockup"
+//     /> */}
+//     <Image
+//       src={image}
+//       className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
+//       alt="Laptop Mockup"
+//       width={500}
+//       height={278}
+//     />
+//   </div>
+// </div>
+// */
