@@ -11,48 +11,54 @@ const ContactForm = () => {
   const [loading, setLoading] = useState(false);
 
   // For contact form display/remove
-  // const contactFormIntersectionRef = useRef<HTMLDivElement>(null);
-  // const isVisible = useIsIntersecting(contactFormIntersectionRef, 0.3);
   const contactFormIntersectionRef = useRef<HTMLDivElement>(null);
   const contactFormHasIntersected = hasIntersected(contactFormIntersectionRef, 0.3);
 
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
-  const [emailInputStatus, setEmailInputStatus] = useState<"success" | "failure" | "">("");
+  const [emailInputValidity, setEmailInputValidity] = useState<"success" | "failure" | "">("");
+  const [nameInputValidity, setNameInputValidity] = useState<"success" | "failure" | "">("");
 
+  // NAME INPUT VALIDATION AND HANDLING
+  const handleNameChange = (e: ChangeEvent<HTMLInputElement>) => {
+    let nameInput = e.target.value;
+    setName(nameInput);
+    const nameRegex = /^([a-zA-Z ]){2,30}$/; // Regex to allow only alphabetic characters and spaces
+
+    if (nameRegex.test(nameInput)) {
+      // VALID NAME
+      setNameInputValidity("success"); //resets the input field color}
+      setName(nameInput);
+    } else {
+      // VALIDITY CHECK FAILED OR EMPTY
+      if (nameInput.length === 0) setNameInputValidity(""); //reset input field
+      else if (nameInput.length >= 1) setNameInputValidity("failure"); //resets the input field color}
+    }
+  };
+
+  // EMAIL INPUT VALIDATION AND HANDLING
   const handleEmailChange = (e: ChangeEvent<HTMLInputElement>) => {
-    setEmail(e.target.value);
     const emailInput = e.target.value;
+    setEmail(emailInput);
     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i;
 
     // IF VALID - SET SUCCESS COLOR AND
     if (emailRegex.test(emailInput)) {
       console.log("valid email: ", emailInput);
-      setEmailInputStatus("success");
-      // Valid email format
+      setEmailInputValidity("success"); //Sets the input field color to GREEN
       setEmail(emailInput);
     } else {
-      // Invalid email format
-      console.log("invalid email: ", emailInput);
-      // email input is 0 - no text
-      // atleast 1 character - invalid email
-      if (emailInput.length === 0) setEmailInputStatus("");
-      else if (emailInput.length >= 1) setEmailInputStatus("failure");
-      // if (emailInput.length === 0) setIsEmailInputValid(false);
-      // emailInput.length >= 1 && setIsEmailInputValid(false);
-      // You can handle this case, e.g., show an error message
-      // TODO - set our color image to an error color and show helper text under it
+      // FAILED VALIDATION CHECK OR EMPTY
+      if (emailInput.length === 0) setEmailInputValidity("");
+      else if (emailInput.length >= 1) setEmailInputValidity("failure"); //Sets the input field color to RED
     }
-    // setEmail(e.target.value);
   };
 
+  // SENDS EMAILS
   const handleSubmit = async (event: FormEvent) => {
-    // const handleSubmit = async (event: any) => {
     event.preventDefault();
     setLoading(true);
-    // console.log("user submitted form");
-    // console.log("data: ", { name, email, message });
 
     const data = {
       name: name,
@@ -77,6 +83,8 @@ const ContactForm = () => {
       setName("");
       setEmail("");
       setMessage("");
+      setEmailInputValidity("");
+      setNameInputValidity("");
       // <Toast_ />;
     }
 
@@ -109,42 +117,50 @@ const ContactForm = () => {
           {/* NAME INPUT */}
           <div className="max-w-md w-full min-h-[107px]">
             <div className="mb-2 block">
-              <Label htmlFor="username3" value="Name*" className="font-semibold text-white" />
+              <Label htmlFor="username3" value="Name (required)" className="font-semibold text-white" />
             </div>
             <TextInput
               icon={BsFillPersonFill}
               id="username3"
               placeholder="Michael Scott"
-              onChange={(e) => setName(e.target.value)}
+              color={nameInputValidity} // 'failure' | 'success' | ''
+              // onChange={(e) => setName(e.target.value)}
+              onChange={(e) => handleNameChange(e)}
               value={name}
               required
-              // className="border-b-2 border-[#fff] rounded-lg focus:outline-none focus:border-[#ffb700]"
+              helperText={
+                //displays text IF input is invalid
+                nameInputValidity === "failure" && (
+                  <p>
+                    <span className="font-medium">Must be at least 2 characters & no special characters</span>
+                  </p>
+                )
+              }
             />
           </div>
 
           {/* EMAIL INPUT  */}
           <div className="max-w-md w-full min-h-[107px]">
             <div className="mb-2 block">
-              <Label htmlFor="email4" value="Email*" className="font-semibold text-white" />
+              <Label htmlFor="email4" value="Email (required)" className="font-semibold text-white" />
             </div>
             <TextInput
               icon={HiMail}
               id="email4"
-              color={emailInputStatus} // 'failure' | 'success' | ''
+              color={emailInputValidity} // 'failure' | 'success' | ''
               helperText={
-                emailInputStatus === "failure" && (
+                //displays text IF input is invalid
+                emailInputValidity === "failure" && (
                   <p>
-                    <span className="font-medium">Invalid Email</span>
+                    <span className="font-medium">Invalid Email - ex. name@gmail.com</span>
                   </p>
                 )
               }
               placeholder="michaelscott@gmail.com"
               required
               type="email"
-              // onChange={(e) => setEmail(e.target.value)}
               onChange={(e) => handleEmailChange(e)}
               value={email}
-              // className="border-b-2 border-[#fff] rounded-lg focus:outline-none focus:border-[#ffb700]"
             />
           </div>
 
