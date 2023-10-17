@@ -4,28 +4,24 @@ import { useEffect, useState } from "react";
 
 const Navbar_ = () => {
   const [active, setActive] = useState("home");
-
-  // const [scrolling, setScrolling] = useState(false);
-  const [isScrollingDown, setIsScrollingDown] = useState(false);
-  const [navbarVisible, setNavbarVisible] = useState(true);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
 
   useEffect(() => {
-    let previousScroll: number = 0;
+    let prevScrollPos = window.scrollY;
 
     // Function to handle scroll events
     const handleScroll = () => {
+      var currentScrollPos = window.pageYOffset;
+
       // IF USER IS SCROLLING DOWN - HIDE NAVBAR
-      if (window.scrollY > previousScroll) {
-        previousScroll = window.scrollY;
-        // User is scrolling down
-        setIsScrollingDown(true);
-        setNavbarVisible(false);
+      if (window.scrollY > prevScrollPos) {
+        setIsNavbarVisible(false);
       } else {
         //USER IS SCROLLING UP - DISPLAY NAVBAR
-        let previousScroll = window.scrollY;
-        setIsScrollingDown(false);
-        setNavbarVisible(true);
+        setIsNavbarVisible(true);
       }
+      // Update value for the next scroll event comparison
+      prevScrollPos = currentScrollPos;
     };
 
     // Attach scroll event listener
@@ -45,12 +41,10 @@ const Navbar_ = () => {
   // const navbarVisible = "translate-y-0";
 
   return (
-    // <Navbar fluid rounded className="fixed z-[9999] w-full">
-    // <Navbar fluid rounded className="fixed z-[999] w-full">
     <Navbar
       fluid
       rounded
-      className={`fixed z-[999] w-full transition-transform duration-300 ${isScrollingDown ? `translate-y-[-100%]` : `translate-y-0`}`}
+      className={`fixed z-[999] w-full transition-transform duration-300 ${isNavbarVisible ? `translate-y-0` : `translate-y-[-100%]`}`}
     >
       <span className="self-center text-2xl font-semibold whitespace-nowrap text-primary dark:text-dark cursor-default">
         &lt;BS /&gt;
