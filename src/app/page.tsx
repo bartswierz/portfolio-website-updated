@@ -12,7 +12,7 @@ export default function Home() {
   // console.log("work project list: ", WorkProjectList);
   const workProject = WorkProjectList[0];
 
-  console.log("Work Project", workProject);
+  // console.log("Work Project", workProject);
   return (
     // <main className="flex min-h-screen flex-col items-center p-4">
     // <main className="flex min-h-screen flex-col items-center">

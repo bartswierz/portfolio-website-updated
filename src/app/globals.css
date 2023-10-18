@@ -183,93 +183,57 @@ body {
   width: 100%;
 }
 
-/*************************************************************/
-/* body {
-  margin: 0;
-  background: linear-gradient(#0d0d0d, #212121);
-  font-family: "Euclid Circular A", "Poppins";
-  color: #d6dfed;
+/*****************HAMBURGER CSS***********************************/
+/* Hamburger Menu this is the container box 24x24 px*/
+.hamburger {
+  cursor: pointer;
+  width: 24px;
+  height: 24px;
+  transition: all 0.25s;
+  position: relative;
 }
 
-html,
-body {
-  height: 100%;
-} */
-
-/* .background {
+/* Each individual hamburger line */
+.hamburger-top,
+.hamburger-middle,
+.hamburger-bottom {
   position: absolute;
-  z-index: -1;
+  width: 24px;
+  height: 2px;
   top: 0;
   left: 0;
-  right: 0;
-  bottom: 0;
-} */
-
-/* ul {
-  display: flex;
-  list-style: none;
-  padding: 0;
-  margin: 0;
-} */
-
-/* .socials {
-  gap: 20px;
+  /* background: #fff; */
+  background: grey;
+  transform: rotate(0);
+  transition: all 0.5s;
 }
 
-.socials a {
-  font-size: 24px;
+/* Shifting 2nd hamburger line to middle spot */
+.hamburger-middle {
+  transform: translateY(7px);
 }
 
-.links {
-  gap: 10px;
+/* Shifting 3rd hamburger line to bottom spot*/
+.hamburger-bottom {
+  transform: translateY(14px);
 }
 
-.legal {
-  font-size: 12px;
-  margin: 0;
-} */
+/* WHEN HAMBURGER IS OPEN - ROTATE 90 DEG turning it into '|||' */
+.open {
+  transform: rotate(90deg);
+}
 
-/* svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  transform: scaleY(3) scaleX(2.25);
-  /* transform: scaleY(2) scaleX(1.25); */
-/* transform-origin: bottom;
-  box-sizing: border-box;
-  display: block;
-  pointer-events: none;
-} */
-/* 
-footer {
-  position: fixed;
-  left: 0;
-  bottom: 12px;
-  display: flex;
-  width: 100%;
-  height: 370px;
-} */
+/* Moving top line into diagonal '/' */
+.open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+}
 
-/* section {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  gap: 30px;
-  padding-bottom: 80px;
-  padding-left: 60px;
-  width: 100%;
-} */
+/* Remove middle because we don't need the third line */
+.open .hamburger-middle {
+  display: none;
+}
 
-/* @media (width > 420px) {
-  /* section {
-    align-items: center;
-    padding-left: 0;
-    gap: 20px;
-  }
-
-  .links {
-    gap: 20px;
-  } */
-/* } */
+/* Moving bottom line into diagonal '\' */
+.open .hamburger-bottom {
+  transform: rotate(-45deg) translateY(6px) translateX(-6px);
+}

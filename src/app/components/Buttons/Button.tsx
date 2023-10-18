@@ -8,9 +8,6 @@ interface ButtonProps {
 
 // TODO - pass lnik
 const Button = ({ text, buttonType, link }: ButtonProps) => {
-  console.log("text: ", text);
-  console.log("link: ", link);
-
   if (!link) return null;
 
   return (

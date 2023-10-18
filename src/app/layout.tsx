@@ -1,7 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
 // import { Inter } from "next/font/google";
-import Navbar_ from "./components/Navbar";
+// import Navbar_ from "./components/Navbar";
+import Navbar_ from "./components/Navbar_";
 // import { DarkThemeToggle, Flowbite } from "flowbite-react";
 // import { ThemeProvider } from "next-themes";
 import Providers from "./providers";

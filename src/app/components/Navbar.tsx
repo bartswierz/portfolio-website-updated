@@ -5,6 +5,7 @@ import { useEffect, useState } from "react";
 const Navbar_ = () => {
   const [active, setActive] = useState("home");
   const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [menuToggle, setMenuToggle] = useState(false);
 
   useEffect(() => {
     let prevScrollPos = window.scrollY;
@@ -50,12 +51,20 @@ const Navbar_ = () => {
         &lt;BS /&gt;
       </span>
 
-      {/* <div className="flex md:order-2 gap-2">
-        <Flowbite>
+      <div className="flex md:order-2 gap-2">
+        {/* <Flowbite>
           <DarkThemeToggle />
-        </Flowbite>
+        </Flowbite> */}
+        {/* <button className="block md:hidden hamburger text-white ">X</button> */}
+        {/* <div className="md:hidden">
+          <button id="menu-btn" type="button" className="z-40 block hamburger focus:outline-none">
+            <span className="hamburger-top"></span>
+            <span className="hamburger-middle"></span>
+            <span className="hamburger-bottom"></span>
+          </button>
+        </div> */}
         <Navbar.Toggle />
-      </div> */}
+      </div>
       {/* NAV LINKS */}
       <Navbar.Collapse>
         <Navbar.Link
