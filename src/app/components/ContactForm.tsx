@@ -174,6 +174,7 @@ const ContactForm = () => {
               placeholder="Leave a comment..."
               required
               rows={4}
+              color={""}
               onChange={(e) => setMessage(e.target.value)}
               value={message}
               className="min-h-[70px] border-b-2 border-[#fff] rounded-lg focus:outline-none focus:border-[#ffb700]"
