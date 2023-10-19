@@ -38,6 +38,12 @@ const NavbarNew = () => {
   // on hover: underline will expand from the the left to the right
   const underlineStyle = "block max-w-0 group-hover:max-w-full transition-all duration-300 h-[3px] bg-brand";
 
+  // TODO pass the active type
+  function handleMobileLink(linkName: string) {
+    setActive(linkName);
+    setToggleMenu(false); //closes menu when user clicks a link
+  }
+
   return (
     <div>
       <nav
@@ -105,8 +111,7 @@ const NavbarNew = () => {
         } fixed p-3 rounded-lg bg-primary left-0 right-0 top-10 z-10 transition-all duration-500 ease-in-out overflow-y-hidden`}
       >
         <div className="flex flex-col items-center justify-center w-full font-bold text-white rounded-sm divide-y divide-solid text-center">
-          <Link href="#" className="w-full p-2" onClick={() => setActive("home")}>
-            {/* Home */}
+          <Link href="#" className="w-full p-2" onClick={() => handleMobileLink("home")}>
             <p
               className={`hover:text-highlight transition-colors duration-300
             ${active === "home" ? "text-highlight" : ""} `}
@@ -114,7 +119,7 @@ const NavbarNew = () => {
               Home
             </p>
           </Link>
-          <Link href="#work" className="w-full p-2" onClick={() => setActive("work")}>
+          <Link href="#work" className="w-full p-2" onClick={() => handleMobileLink("work")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
             ${active === "work" ? "text-highlight" : ""} `}
@@ -122,7 +127,7 @@ const NavbarNew = () => {
               Work Projects
             </p>
           </Link>
-          <Link href="#personal" className="w-full p-2">
+          <Link href="#personal" className="w-full p-2" onClick={() => handleMobileLink("personal")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
             ${active === "personal" ? "text-highlight" : ""} `}
@@ -130,7 +135,7 @@ const NavbarNew = () => {
               Personal Projects
             </p>
           </Link>
-          <Link href="#about" className="w-full p-2">
+          <Link href="#about" className="w-full p-2" onClick={() => handleMobileLink("about")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
               ${active === "about" ? "text-highlight" : ""} `}
@@ -138,12 +143,12 @@ const NavbarNew = () => {
               About
             </p>
           </Link>
-          <Link href="#contact" className="w-full p-2">
+          <Link href="#contact" className="transition-all scroll-smooth w-full p-2" onClick={() => handleMobileLink("contact")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
               ${active === "contact" ? "text-highlight" : ""} `}
             >
-              Personal Projects
+              Contact
             </p>
           </Link>
           <Link
