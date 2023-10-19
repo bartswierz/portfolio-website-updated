@@ -1,16 +1,8 @@
 import "./globals.css";
+// import "flowbite";
 import type { Metadata } from "next";
-// import { Inter } from "next/font/google";
-// import Navbar_ from "./components/Navbar";
-import Navbar_ from "./components/Navbar_";
-// import { DarkThemeToggle, Flowbite } from "flowbite-react";
-// import { ThemeProvider } from "next-themes";
-import Providers from "./providers";
-import ThemeSwitcher from "./components/ThemeSwitcher";
-import "flowbite";
+import Navbar_ from "./components/Navbar";
 import { Poppins } from "next/font/google";
-import Footer from "./components/Footer";
-// const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "Bartosz Swierzynski - Portfolio",
