@@ -57,8 +57,8 @@ body {
   -ms-animation: gradient 10s ease infinite; */
   /* --color: #000;
   --background-color: #fff; */
-  /* background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92); */
-  background: linear-gradient(-45deg, #004e92, #0028ff, #000428, #000428, #0028ff);
+  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  /*background: linear-gradient(-45deg, #004e92, #0028ff, #000428, #000428, #0028ff);  */
   /* background: linear-gradient(-45deg, #000, #000000, #000428, #000428, #0028ff); */
   background-size: 125% 125%;
   animation: gradient 10s ease infinite;
