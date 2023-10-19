@@ -22,7 +22,7 @@ export default function Modal__({ accordionObj }: ModalProps) {
     <>
       {/* BUTTON TO OPEN MODAL */}
       <button
-        className="relative inline-flex items-center justify-start inline-block px-5 py-2 overflow-hidden font-bold rounded-lg group text-[10px] sm:text-sm"
+        className="relative inline-flex items-center justify-start inline-block px-5 py-2 overflow-hidden font-bold rounded-lg group  text-sm"
         onClick={() => props.setOpenModal("default")}
       >
         {/* GRAY SHAPE DESIGN */}
