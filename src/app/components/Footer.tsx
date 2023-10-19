@@ -82,33 +82,33 @@ const Footer = () => {
       </ul>
       <ul className="flex gap-2 justify-center py-2 list-none md:list-disc list-inside flex-wrap mx-2 flex-col md:flex-row text-center transition-all">
         <li className="pr-2">
-          <Link href="#" className="hover:text-highlight duration-300">
+          <a href="#" className="hover:text-highlight duration-300">
             Home
-          </Link>
+          </a>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#work" className="hover:text-highlight duration-300">
+          <a href="#work" className="hover:text-highlight duration-300">
             Work Projects
-          </Link>
+          </a>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#personal" className="hover:text-highlight duration-300">
+          <a href="#personal" className="hover:text-highlight duration-300">
             Personal Projects
-          </Link>
+          </a>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#about" className="hover:text-highlight duration-300">
+          <a href="#about" className="hover:text-highlight duration-300">
             About
-          </Link>
+          </a>
         </li>
         {/* <span>&#x2022;</span> */}
         <li className="pr-2">
-          <Link href="#contact" className="hover:text-highlight duration-300">
+          <a href="#contact" className="hover:text-highlight duration-300">
             Contact
-          </Link>
+          </a>
         </li>
       </ul>
       <p className="text-center">BartoszSwierzynski.com © 2023 </p>
