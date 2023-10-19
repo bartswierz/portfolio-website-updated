@@ -1,7 +1,10 @@
 import { useEffect, useState } from "react";
 
 // observer will check if the element has crossed the threshold, if it has, it will mark it as intersecting and stop observing it for the remainder of the application. This is intended to be used ONCE without removing it off the screen.
-export default function hasIntersected(ref, threshold) {
+// export default function hasIntersected(ref, threshold) {
+// import { useState } from "react";
+
+export default function useHasIntersected(ref, threshold) {
   const [isIntersecting, setIntersecting] = useState(false);
 
   useEffect(() => {
