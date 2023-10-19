@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 interface ButtonProps {
   text: string;
   buttonType: "primary" | "secondary" | "link";
@@ -12,7 +10,7 @@ const Button = ({ text, buttonType, link }: ButtonProps) => {
 
   return (
     <div>
-      <Link
+      <a
         href={link}
         className="relative inline-flex items-center justify-start inline-block 
         px-5 py-2 
@@ -25,7 +23,7 @@ const Button = ({ text, buttonType, link }: ButtonProps) => {
           {text}
         </span>
         <span className="absolute inset-0 border-2 border-white hover:border-primary rounded-lg"></span>
-      </Link>
+      </a>
     </div>
   );
 };
