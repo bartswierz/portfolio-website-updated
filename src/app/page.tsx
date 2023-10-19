@@ -25,14 +25,16 @@ export default function Home() {
         </div>
 
         {/* WORK PROJECTS */}
-        <div id="work" className="mt-8"></div>
-        <ProjectHeading text="Work Projects" />
-        <Project data={workProject} key={workProject.id} />
+        <div id="work" className="mt-8 min-h-screen">
+          <ProjectHeading text="Work Projects" />
+          <Project data={workProject} key={workProject.id} />
+        </div>
 
         {/* PERSONAL PROJECTS */}
-        <div id="personal" className="mt-8"></div>
-        <ProjectHeading text="Personal Projects" />
-        <ProjectList list={PersonalProjectList} />
+        <div id="personal" className="mt-8">
+          <ProjectHeading text="Personal Projects" />
+          <ProjectList list={PersonalProjectList} />
+        </div>
 
         {/* CONTACT */}
         <div id="contact" className="min-h-screen w-screen flex justify-center items-center">
