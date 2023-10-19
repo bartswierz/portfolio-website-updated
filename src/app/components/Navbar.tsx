@@ -58,35 +58,35 @@ const NavbarNew = () => {
 
           {/* DESKTOP - LINKS */}
           <div className="hidden space-x-8 font-bold md:flex">
-            <Link href="#" className="group text-gray-300 transition duration-300" onClick={() => setActive("home")}>
+            <a href="#home" className="group text-gray-300 transition duration-300" onClick={() => setActive("home")}>
               <p className={`${active === "home" ? "text-gray-200" : ""} `}>Home</p>
               <span className={`${underlineStyle} ${active === "home" ? "max-w-full" : ""}`}></span>
-            </Link>
+            </a>
 
-            <Link href="#work" className="group text-gray-300 transition duration-300" onClick={() => setActive("work")}>
+            <a href="#work" className="group text-gray-300 transition duration-300" onClick={() => setActive("work")}>
               <p className={`${active === "work" ? "text-gray-200" : ""} `}>Work Projects</p>
               <span className={`${underlineStyle} ${active === "work" ? "max-w-full" : ""}`}></span>
-            </Link>
+            </a>
 
-            <Link href="#personal" className="group text-gray-300 transition duration-300" onClick={() => setActive("personal")}>
+            <a href="#personal" className="group text-gray-300 transition duration-300" onClick={() => setActive("personal")}>
               <p className={`${active === "personal" ? "text-gray-200" : ""} `}>Personal Projects</p>
               <span className={`${underlineStyle} ${active === "personal" ? "max-w-full" : ""}`}></span>
-            </Link>
+            </a>
 
-            <Link href="#about" className="group text-gray-300 transition duration-300" onClick={() => setActive("about")}>
+            <a href="#about" className="group text-gray-300 transition duration-300" onClick={() => setActive("about")}>
               <p className={`${active === "about" ? "text-gray-200" : ""} `}>About</p>
               <span className={`${underlineStyle} ${active === "about" ? "max-w-full" : ""}`}></span>
-            </Link>
+            </a>
 
-            <Link href="#contact" className="group text-gray-300 transition duration-300" onClick={() => setActive("contact")}>
+            <a href="#contact" className="group text-gray-300 transition duration-300" onClick={() => setActive("contact")}>
               <p className={`${active === "contact" ? "text-gray-200" : ""} `}>Contact</p>
               <span className={`${underlineStyle} ${active === "contact" ? "max-w-full" : ""}`}></span>
-            </Link>
+            </a>
 
-            <Link href="./files/Bartosz_Swierzynski.pdf" className="group text-gray-300 transition duration-300" target="_blank">
+            <a href="./files/Bartosz_Swierzynski.pdf" className="group text-gray-300 transition duration-300" target="_blank">
               <p className={`${active === "resume" ? "text-gray-200" : ""} `}>Resume</p>
               <span className={`${underlineStyle} ${active === "resume" ? "max-w-full" : ""}`}></span>
-            </Link>
+            </a>
           </div>
 
           {/* HAMBURGER - MENU BUTTON */}
@@ -111,53 +111,53 @@ const NavbarNew = () => {
         } fixed p-3 rounded-lg bg-primary left-0 right-0 top-10 z-10 transition-all duration-500 ease-in-out overflow-y-hidden`}
       >
         <div className="flex flex-col items-center justify-center w-full font-bold text-white rounded-sm divide-y divide-solid text-center">
-          <Link href="#" className="w-full p-2" onClick={() => handleMobileLink("home")}>
+          <a href="#" className="w-full p-2" onClick={() => handleMobileLink("home")}>
             <p
               className={`hover:text-highlight transition-colors duration-300
             ${active === "home" ? "text-highlight" : ""} `}
             >
               Home
             </p>
-          </Link>
-          <Link href="#work" className="w-full p-2" onClick={() => handleMobileLink("work")}>
+          </a>
+          <a href="#work" className="w-full p-2" onClick={() => handleMobileLink("work")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
             ${active === "work" ? "text-highlight" : ""} `}
             >
               Work Projects
             </p>
-          </Link>
-          <Link href="#personal" className="w-full p-2" onClick={() => handleMobileLink("personal")}>
+          </a>
+          <a href="#personal" className="w-full p-2" onClick={() => handleMobileLink("personal")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
             ${active === "personal" ? "text-highlight" : ""} `}
             >
               Personal Projects
             </p>
-          </Link>
-          <Link href="#about" className="w-full p-2" onClick={() => handleMobileLink("about")}>
+          </a>
+          <a href="#about" className="w-full p-2" onClick={() => handleMobileLink("about")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
               ${active === "about" ? "text-highlight" : ""} `}
             >
               About
             </p>
-          </Link>
-          <Link href="#contact" className="transition-all scroll-smooth w-full p-2" onClick={() => handleMobileLink("contact")}>
+          </a>
+          <a href="#contact" className="transition-all scroll-smooth w-full p-2" onClick={() => handleMobileLink("contact")}>
             <p
               className={`hover:text-highlight transition-colors duration-300 
               ${active === "contact" ? "text-highlight" : ""} `}
             >
               Contact
             </p>
-          </Link>
-          <Link
+          </a>
+          <a
             href="./files/Bartosz_Swierzynski.pdf"
             className="w-full  text-center p-2 hover:text-highlight transition-colors duration-300"
             target="_blank"
           >
             Resume
-          </Link>
+          </a>
         </div>
       </div>
     </div>

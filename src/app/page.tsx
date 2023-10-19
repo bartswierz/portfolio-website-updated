@@ -2,7 +2,6 @@ import Hero from "./components/Hero";
 import About from "./components/About";
 import ProjectList from "./components/ProjectList";
 import { PersonalProjectList, WorkProjectList } from "./constants";
-import TechnologiesList from "./components/TechnologiesList";
 import ContactForm from "./components/ContactForm";
 import Footer from "./components/Footer";
 import Project from "./components/Project";
@@ -17,7 +16,7 @@ export default function Home() {
     // <main className="flex min-h-screen flex-col items-center p-4">
     // <main className="flex min-h-screen flex-col items-center">
     <main className="">
-      <div className="flex min-h-screen flex-col items-center p-4">
+      <div className="flex min-h-screen flex-col items-center p-4" id="home">
         <Hero />
 
         <div id="about" className="min-w-screen min-h-screen flex justify-center items-center flex-col">
@@ -42,7 +41,7 @@ export default function Home() {
       </div>
 
       {/* <div className="w-full relative"> */}
-      <Footer />
+      {/* <Footer /> */}
       {/* </div> */}
     </main>
   );

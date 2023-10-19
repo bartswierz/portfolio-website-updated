@@ -101,13 +101,18 @@ const ContactForm = () => {
     }
   };
 
+  // ${
+  //   contactFormHasIntersected
+  //     ? "animate-jump-in animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in transition-opacity opacity-100 duration-[500ms]"
+  //     : "opacity-0"
+  // }`}
   return (
     <div
       ref={contactFormIntersectionRef}
       className={`border-[3px] border-white max-w-[550px] w-full bg-primary p-4 rounded-lg my-8 mx-4
     ${
       contactFormHasIntersected
-        ? "animate-jump-in animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in transition-opacity opacity-100 duration-[500ms]"
+        ? "animate-fade-right animate-once animate-duration-[300ms] animate-delay-300- animate-ease-in transition-opacity opacity-100 duration-[500ms]"
         : "opacity-0"
     }`}
     >

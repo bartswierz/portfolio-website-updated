@@ -3,6 +3,7 @@ import "./globals.css";
 import type { Metadata } from "next";
 import Navbar_ from "./components/Navbar";
 import { Poppins } from "next/font/google";
+import Footer from "./components/Footer";
 
 export const metadata: Metadata = {
   title: "Bartosz Swierzynski - Portfolio",
@@ -23,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar_ />
         {children}
         {/* <div className="absolute bottom-0 left-0 right-0 z-[-1]"> */}
-        {/* <Footer /> */}
+        <Footer />
         {/* </div> */}
       </body>
     </html>
