@@ -41,16 +41,8 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
             className="h-[156px] md:h-[278px] w-full  object-center"
             alt="Laptop Mockup"
           /> */}
-          {/* TODO - replace this with a carousel slider */}
-          {/* <Image
-            // src={image}
-            src={imageList}
-            className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
-            alt="Laptop Mockup"
-            width={500}
-            height={278}
-          /> */}
-          <Carousel pauseOnHover indicators={false}>
+          {/* slide is passed the intersecting conditional to only have AUTO SLIDE IF LAPTOP IS IN THE VIEWPORT */}
+          <Carousel pauseOnHover indicators={false} slide={isVisible ? true : false}>
             {imageList.map((image, idx) => (
               <div key={idx}>
                 <Image
@@ -62,20 +54,6 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
                 />
               </div>
             ))}
-            {/* {imageList.map((image, idx) => 
-            return (
-            <div key={idx}>
-                <Image
-              // src={image}
-              src={image}
-              className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
-              alt="Laptop Mockup"
-              width={500}
-              height={278}
-            />
-            </div>
-            )
-         )} */}
           </Carousel>
         </div>
       </div>
