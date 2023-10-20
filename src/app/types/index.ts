@@ -6,7 +6,7 @@ export interface ProjectData {
   description: string;
   liveURL?: string; //Polaris doesnt have live url
   githubURL: string;
-  // imageList?: string[]; //project images
+  imageList?: string[]; //project images
   image?: string; //project images
 
   accordionObj: {

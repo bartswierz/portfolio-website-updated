@@ -2,17 +2,20 @@
 import Image from "next/image";
 import useIsIntersecting from "../utils/isIntersecting";
 import { useRef } from "react";
+import { Carousel } from "flowbite-react";
 
 interface LaptopMockupProps {
-  image: string;
+  // image: string;
+  imageList: string[];
 }
 
 // Laptop display for my projects - when laptop is within the window, we will 'flip' it up, and close it when it's out of the window
-const LaptopMockup = ({ image }: LaptopMockupProps) => {
+// const LaptopMockup = ({ image }: LaptopMockupProps) => {
+const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
   // const laptopIntersectionRef = useRef();
   const laptopIntersectionRef = useRef<HTMLDivElement>(null);
   const isVisible = useIsIntersecting(laptopIntersectionRef, 0.3);
-
+  console.log("laptopmockup - imageList: ", imageList);
   return (
     <div className="mb-6" ref={laptopIntersectionRef}>
       {/* LAPTOP SCREEN SECTION */}
@@ -38,13 +41,42 @@ const LaptopMockup = ({ image }: LaptopMockupProps) => {
             className="h-[156px] md:h-[278px] w-full  object-center"
             alt="Laptop Mockup"
           /> */}
-          <Image
-            src={image}
+          {/* TODO - replace this with a carousel slider */}
+          {/* <Image
+            // src={image}
+            src={imageList}
             className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
             alt="Laptop Mockup"
             width={500}
             height={278}
-          />
+          /> */}
+          <Carousel>
+            {imageList.map((image, idx) => (
+              <div key={idx}>
+                <Image
+                  src={image}
+                  className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
+                  alt="Laptop Mockup"
+                  width={500}
+                  height={278}
+                />
+              </div>
+            ))}
+            {/* {imageList.map((image, idx) => 
+            return (
+            <div key={idx}>
+                <Image
+              // src={image}
+              src={image}
+              className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
+              alt="Laptop Mockup"
+              width={500}
+              height={278}
+            />
+            </div>
+            )
+         )} */}
+          </Carousel>
         </div>
       </div>
 
