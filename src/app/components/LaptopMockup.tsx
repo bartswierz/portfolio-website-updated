@@ -50,7 +50,7 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
             width={500}
             height={278}
           /> */}
-          <Carousel>
+          <Carousel pauseOnHover indicators={false}>
             {imageList.map((image, idx) => (
               <div key={idx}>
                 <Image
