@@ -21,15 +21,19 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
       {/* Project Description Tab*/}
       <Accordion.Panel>
         <Accordion.Title>Project Description</Accordion.Title>
-        <Accordion.Content>
+        {/* <Accordion.Content> */}
+        <Accordion.Content className="h-full max-h-[50vh] transition-all duration-500">
           <p className="mb-2 text-gray-500 dark:text-gray-400">{description}</p>
+          {/* <p className="mb-2 text-gray-500 dark:text-gray-400 text-ellipsis- text-clip- truncate- h-full- max-h-[200px]- overflow-hidden- text">
+            {description}
+          </p> */}
         </Accordion.Content>
       </Accordion.Panel>
 
       {/* Why did I build this project? Tab */}
-      <Accordion.Panel>
+      <Accordion.Panel className="max-h-[50vh] overflow-hidden text-clip">
         <Accordion.Title>Why did I build this project?</Accordion.Title>
-        <Accordion.Content>
+        <Accordion.Content className="h-full max-h-[50vh] transition-all- transition-max-h duration-500 text-clip bg-green-500">
           <p className="mb-2 text-gray-500 dark:text-gray-400">{reason}</p>
         </Accordion.Content>
       </Accordion.Panel>

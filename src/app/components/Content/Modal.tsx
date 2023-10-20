@@ -29,7 +29,7 @@ export default function Modal__({ accordionObj }: ModalProps) {
         <span className="w-[204px] h-[204px] rotate-45 translate-x-[40px] -translate-y-2 absolute left-0 top-0 bg-white opacity-[3%]"></span>
 
         {/* LEFT TO RIGHT COLOR TRANSITION */}
-        <span className="absolute top-[-2px] left-0 w-52 h-52 -mt-1 transition-all duration-[600ms] ease-in-out rotate-45 -translate-x-56x -translate-x-[246px] -translate-y-24 bg-white- bg-brand opacity-100 group-hover:-translate-x-8x group-hover:-translate-x-2"></span>
+        <span className="absolute top-[-2px] left-0 w-52 h-52 -mt-1 transition-all duration-[600ms] ease-in-out rotate-45 -translate-x-56x -translate-x-[246px] -translate-y-24 bg-brand opacity-100 group-hover:-translate-x-8x group-hover:-translate-x-2"></span>
 
         {/* TEXT COLOR CHANGE ON HOVER */}
         <span className="relative w-full text-left text-white transition-colors duration-300 ease-in-out group-hover:text-gray-900">
@@ -39,21 +39,26 @@ export default function Modal__({ accordionObj }: ModalProps) {
       </button>
 
       {/* MODAL CONTENT - DISPLAYED IN CENTERED VERTICALLY & HORIZONTALLY */}
-      <Modal className="bg-gray-900/70 z-[9999]" show={props.openModal === "default"} onClose={() => props.setOpenModal(undefined)}>
-        <div className="dark:bg-primary overflow-auto">
+      <Modal
+        className="bg-gray-900/70 z-[9999] max-h-[30vh]-"
+        show={props.openModal === "default"}
+        onClose={() => props.setOpenModal(undefined)}
+      >
+        <div className="dark:bg-primary overflow-auto max-h-[98vh]-">
           <Modal.Header>Project Overview</Modal.Header>
           <Modal.Body>
             <Accordion__ accordionObj={accordionObj} />
           </Modal.Body>
-          <Modal.Footer>
+          {/* <Modal.Footer className="flex justify-center items-end b"> */}
+          {/* <Modal.Footer className="justify-end">
             <Button
               color=""
-              className="border-[3px] border-white text-white font-semibold hover:bg-technology"
+              className="border-[2px] border-white text-white font-semibold hover:bg-technology"
               onClick={() => props.setOpenModal(undefined)}
             >
               Close
             </Button>
-          </Modal.Footer>
+          </Modal.Footer> */}
         </div>
       </Modal>
     </>

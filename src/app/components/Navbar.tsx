@@ -57,34 +57,58 @@ const NavbarNew = () => {
           </span>
 
           {/* DESKTOP - LINKS */}
-          <div className="hidden space-x-8 font-bold md:flex">
-            <a href="#home" className="group text-gray-300 transition duration-300" onClick={() => setActive("home")}>
-              <p className={`${active === "home" ? "text-gray-200" : ""} `}>Home</p>
+          <div className="hidden space-x-8 md:flex">
+            <a
+              href="#home"
+              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              onClick={() => setActive("home")}
+            >
+              <p className={`${active === "home" ? "text-gray-100" : ""} `}>Home</p>
               <span className={`${underlineStyle} ${active === "home" ? "max-w-full" : ""}`}></span>
             </a>
 
-            <a href="#work" className="group text-gray-300 transition duration-300" onClick={() => setActive("work")}>
-              <p className={`${active === "work" ? "text-gray-200" : ""} `}>Work Projects</p>
+            <a
+              href="#work"
+              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              onClick={() => setActive("work")}
+            >
+              <p className={`${active === "work" ? "text-gray-100" : ""} `}>Work Projects</p>
               <span className={`${underlineStyle} ${active === "work" ? "max-w-full" : ""}`}></span>
             </a>
 
-            <a href="#personal" className="group text-gray-300 transition duration-300" onClick={() => setActive("personal")}>
-              <p className={`${active === "personal" ? "text-gray-200" : ""} `}>Personal Projects</p>
+            <a
+              href="#personal"
+              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              onClick={() => setActive("personal")}
+            >
+              <p className={`${active === "personal" ? "text-gray-100" : ""} `}>Personal Projects</p>
               <span className={`${underlineStyle} ${active === "personal" ? "max-w-full" : ""}`}></span>
             </a>
 
-            <a href="#about" className="group text-gray-300 transition duration-300" onClick={() => setActive("about")}>
-              <p className={`${active === "about" ? "text-gray-200" : ""} `}>About</p>
+            <a
+              href="#about"
+              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              onClick={() => setActive("about")}
+            >
+              <p className={`${active === "about" ? "text-gray-100" : ""} `}>About</p>
               <span className={`${underlineStyle} ${active === "about" ? "max-w-full" : ""}`}></span>
             </a>
 
-            <a href="#contact" className="group text-gray-300 transition duration-300" onClick={() => setActive("contact")}>
-              <p className={`${active === "contact" ? "text-gray-200" : ""} `}>Contact</p>
+            <a
+              href="#contact"
+              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              onClick={() => setActive("contact")}
+            >
+              <p className={`${active === "contact" ? "text-gray-100" : ""} `}>Contact</p>
               <span className={`${underlineStyle} ${active === "contact" ? "max-w-full" : ""}`}></span>
             </a>
 
-            <a href="./files/Bartosz_Swierzynski.pdf" className="group text-gray-300 transition duration-300" target="_blank">
-              <p className={`${active === "resume" ? "text-gray-200" : ""} `}>Resume</p>
+            <a
+              href="./files/Bartosz_Swierzynski.pdf"
+              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              target="_blank"
+            >
+              <p className={`${active === "resume" ? "text-gray-100" : ""} `}>Resume</p>
               <span className={`${underlineStyle} ${active === "resume" ? "max-w-full" : ""}`}></span>
             </a>
           </div>
