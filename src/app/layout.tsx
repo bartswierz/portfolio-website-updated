@@ -1,5 +1,4 @@
 import "./globals.css";
-// import "flowbite";
 import type { Metadata } from "next";
 import Navbar_ from "./components/Navbar";
 import { Poppins } from "next/font/google";
@@ -11,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 const poppins = Poppins({
-  weight: ["400", "700"],
+  weight: ["400", "500", "600", "700"],
   style: ["normal", "italic"],
   subsets: ["latin"],
 });

@@ -44,28 +44,29 @@ html {
 }
 
 body {
-  /* --color: var(--background-color);
-  --background-color: var(--text-color); */
-  /* --color: var(--text-color);
-  --background-color: var(--background-color); */
-  /* background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
-  background-size: 125% 125%;
-  animation: gradient 10s ease infinite;
-  -moz-animation: gradient 10s ease infinite;
-  -webkit-animation: gradient 10s ease infinite;
-  -o-animation: gradient 10s ease infinite;
-  -ms-animation: gradient 10s ease infinite; */
-  /* --color: #000;
-  --background-color: #fff; */
   background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
   /*background: linear-gradient(-45deg, #004e92, #0028ff, #000428, #000428, #0028ff);  */
   /* background: linear-gradient(-45deg, #000, #000000, #000428, #000428, #0028ff); */
+  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+
   background-size: 125% 125%;
   animation: gradient 10s ease infinite;
   -moz-animation: gradient 10s ease infinite;
   -webkit-animation: gradient 10s ease infinite;
   -o-animation: gradient 10s ease infinite;
   -ms-animation: gradient 10s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
 }
 
 /* Style for the scrollbar  */
