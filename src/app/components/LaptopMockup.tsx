@@ -42,7 +42,8 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
             alt="Laptop Mockup"
           /> */}
           {/* slide is passed the intersecting conditional to only have AUTO SLIDE IF LAPTOP IS IN THE VIEWPORT */}
-          <Carousel pauseOnHover indicators={false} slide={isVisible ? true : false}>
+          {/* <Carousel pauseOnHover indicators={false} slide={isVisible ? true : false}> */}
+          <Carousel pauseOnHover indicators={true} slide={isVisible ? true : false}>
             {imageList.map((image, idx) => (
               <div key={idx}>
                 <Image

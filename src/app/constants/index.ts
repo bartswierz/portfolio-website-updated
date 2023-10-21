@@ -14,11 +14,11 @@ const nextLevelProject: ProjectData = {
   githubURL: "https://github.com/bartswierz/game-website",
   imageList: [
     "/assets/NLG-browse-genre.png",
-    "/assets/NLG-browse-platforms.png",
     "/assets/NLG-gamepage.png",
     "/assets/NLG-genres.png",
-    "/assets/NLG-homepage.png",
+    "/assets/NLG-browse-platforms.png",
     "/assets/NLG-platforms.png",
+    // "/assets/NLG-homepage.png",
   ],
   // image: "/assets/NLG-browse-genre.png",
   accordionObj: {
@@ -50,11 +50,11 @@ const alphaFootwearProject: ProjectData = {
   githubURL: "https://github.com/bartswierz/shopping-website",
   // image: "/assets/alpha-footwear-product.png",
   imageList: [
-    "/assets/alpha-footwear-cart.png",
-    "/assets/alpha-footwear-checkout.png",
-    "/assets/alpha-footwear-homepage.png",
     "/assets/alpha-footwear-product.png",
+    "/assets/alpha-footwear-checkout.png",
+    "/assets/alpha-footwear-cart.png",
     "/assets/alpha-footwear-signin.png",
+    "/assets/alpha-footwear-homepage.png",
   ],
   accordionObj: {
     description:

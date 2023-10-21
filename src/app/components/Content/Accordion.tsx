@@ -46,7 +46,9 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
         </Accordion.Content>
       </Accordion.Panel>
 
-      {/* Future Features Tab */}
+      {/* Future Features Tab - TODO - optional - work doesnt have*/}
+      {/* {
+        accordionObj.features && ( */}
       <Accordion.Panel>
         <Accordion.Title>Future Features</Accordion.Title>
         <Accordion.Content>
@@ -60,6 +62,12 @@ export default function Accordion__({ accordionObj }: AccordionProps) {
           </ul>
         </Accordion.Content>
       </Accordion.Panel>
+      {/* ) */}
+      {/* // : (
+        //   // <div>test</div>
+        //   ""
+        // ) */}
+      {/* } */}
     </Accordion>
   );
 }
