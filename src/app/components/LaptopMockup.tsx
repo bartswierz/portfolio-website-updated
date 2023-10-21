@@ -15,7 +15,7 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
   // const laptopIntersectionRef = useRef();
   const laptopIntersectionRef = useRef<HTMLDivElement>(null);
   const isVisible = useIsIntersecting(laptopIntersectionRef, 0.3);
-  console.log("laptopmockup - imageList: ", imageList);
+
   return (
     <div className="mb-6" ref={laptopIntersectionRef}>
       {/* LAPTOP SCREEN SECTION */}

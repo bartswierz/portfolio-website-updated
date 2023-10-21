@@ -2,19 +2,13 @@
 import { Button, Modal } from "flowbite-react";
 import { useState } from "react";
 import Accordion__ from "./Accordion";
+import { AccordionObjType } from "@/app/types";
 
 interface ModalProps {
-  accordionObj: {
-    description: string;
-    reason: string;
-    difficulties: string;
-    learned?: string;
-    contributions?: string[]; // for work projects
-    features?: string[]; // for personal projects
-  };
+  accordionList: AccordionObjType[];
 }
 
-export default function Modal__({ accordionObj }: ModalProps) {
+export default function Modal__({ accordionList }: ModalProps) {
   const [openModal, setOpenModal] = useState<string | undefined>();
   const props = { openModal, setOpenModal };
 
@@ -22,7 +16,7 @@ export default function Modal__({ accordionObj }: ModalProps) {
     <>
       {/* BUTTON TO OPEN MODAL */}
       <button
-        className="relative inline-flex items-center justify-start inline-block px-5 py-2 overflow-hidden font-bold rounded-lg group  text-sm"
+        className="relative inline-flex items-center justify-start px-5 py-2 overflow-hidden font-bold rounded-lg group  text-sm"
         onClick={() => props.setOpenModal("default")}
       >
         {/* GRAY SHAPE DESIGN */}
@@ -47,7 +41,7 @@ export default function Modal__({ accordionObj }: ModalProps) {
         <div className="dark:bg-primary overflow-auto max-h-[98vh]-">
           <Modal.Header>Project Overview</Modal.Header>
           <Modal.Body>
-            <Accordion__ accordionObj={accordionObj} />
+            <Accordion__ accordionList={accordionList} />
           </Modal.Body>
           {/* <Modal.Footer className="flex justify-center items-end b"> */}
           {/* <Modal.Footer className="justify-end">

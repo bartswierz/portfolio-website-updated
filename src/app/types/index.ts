@@ -1,3 +1,9 @@
+export type AccordionObjType = {
+  title: string;
+  contentType: "paragraph" | "list";
+  content: string | string[];
+};
+
 export interface ProjectData {
   id: number;
   header: string;
@@ -9,12 +15,19 @@ export interface ProjectData {
   imageList?: string[]; //project images
   image?: string; //project images
 
-  accordionObj: {
-    description: string;
-    reason: string;
-    difficulties: string;
-    learned?: string;
-    contributions?: string[]; // for work projects
-    features?: string[]; // for personal projects
-  };
+  // accordionObj: {
+  //   description: string;
+  //   reason: string;
+  //   difficulties: string;
+  //   learned?: string;
+  //   contributions?: string[]; // for work projects
+  //   features?: string[]; // for personal projects
+  // };
+
+  // accordionObj: {
+  //   title: string;
+  //   contentType: "paragraph" | "list";
+  //   content: string | string[];
+  // }[];
+  accordionList: AccordionObjType[];
 }

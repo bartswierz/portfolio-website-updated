@@ -38,6 +38,9 @@ const config: Config = {
         secondary: "#0072fe",
         brand: "#ffb700",
       },
+      boxShadow: {
+        navbar: "0 0 20px 0 rgba(0, 0, 0, 0.5)",
+      },
     },
   },
   plugins: [require("flowbite/plugin"), require("tailwindcss-animated")],

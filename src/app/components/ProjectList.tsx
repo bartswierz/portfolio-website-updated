@@ -1,4 +1,4 @@
-import { PersonalProjectList } from "../constants";
+// import { PersonalProjectList } from "../constants";
 import { ProjectData } from "../types";
 import Project from "./Project";
 

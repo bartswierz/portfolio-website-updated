@@ -10,8 +10,9 @@ interface ContentProps {
 }
 //Contains project description, links to github, and live site
 const Content = ({ data }: ContentProps) => {
-  const { header, subheader, technologyList, description, liveURL, githubURL, accordionObj } = data;
-
+  // const { header, subheader, technologyList, description, liveURL, githubURL, accordionObj } = data;
+  const { header, subheader, technologyList, description, liveURL, githubURL, accordionList } = data;
+  // console.log("accordionlist: ", accordionList);
   return (
     <div className="p-3 bg-primary border-[3px] border-white rounded-lg overflow-hidden max-w-[600px]">
       {/* HEADER - App name and short subheading*/}
@@ -29,7 +30,7 @@ const Content = ({ data }: ContentProps) => {
         {/* PROJECT BUTTON LINKS - Live Site, Company and/or Github link, and Project Description(modal) */}
       </div>
       <div className="flex-shrink-0 mb-2">
-        <ContentButtons liveURL={liveURL && liveURL} githubURL={githubURL} accordionObj={accordionObj} />
+        <ContentButtons liveURL={liveURL && liveURL} githubURL={githubURL} accordionList={accordionList} />
       </div>
     </div>
   );
