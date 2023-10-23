@@ -47,7 +47,7 @@ const NavbarNew = () => {
   return (
     <div>
       <nav
-        className={`fixed bg-primary w-full text-white text-base p-3 z-[9999] transition-transform duration-300
+        className={`fixed bg-primary w-full text-white text-base p-3 z-[9999] transition-transform duration-300 
         ${isNavbarVisible ? `translate-y-0` : `translate-y-[-100%]`} 
         ${!toggleMenu && "shadow-navbar"}`} //MENU IS NOT OPENED -> ADD SHADOW TO BOTTOM OF NAVBAR
       >
@@ -132,7 +132,7 @@ const NavbarNew = () => {
       <div
         id="menu"
         className={`${
-          toggleMenu ? "translate-y-0 opacity-100 shadow-navbar" : "translate-y-[-50%] opacity-0"
+          toggleMenu ? "translate-y-0 opacity-100 shadow-navbar" : "translate-y-[-100%] opacity-0"
         } fixed p-3 rounded-lg bg-primary left-0 right-0 top-10 z-10 transition-all duration-500 ease-in-out overflow-y-hidden`}
         // className={`${
         //   toggleMenu ? "translate-y-0 opacity-100" : "translate-y-[-120%] opacity-0"
