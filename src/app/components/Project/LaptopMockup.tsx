@@ -1,6 +1,6 @@
 "use client";
 import Image from "next/image";
-import useIsIntersecting from "../utils/isIntersecting";
+import useIsIntersecting from "../../utils/isIntersecting";
 import { useRef } from "react";
 import { Carousel } from "flowbite-react";
 

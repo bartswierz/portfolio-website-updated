@@ -7,7 +7,8 @@ const nextLevelProject: ProjectData = {
   technologyList: ["Next.js", "TypeScript", "Tailwind CSS", "Redux", "Postman", "Shadcn UI"],
   description:
     "Discover an expansive world of gaming with our game information web application with access to over 850,000+ games. The web application is built on Next.js with frequently updated data fetched via API from RAWG API.",
-  liveURL: "https://next-level-games.netlify.app/",
+  // liveURL: "https://next-level-games.netlify.app/",
+  liveURL: "https://next-level-games.vercel.app//",
   githubURL: "https://github.com/bartswierz/game-website",
   imageList: [
     "/assets/NLG-browse-genre.png",

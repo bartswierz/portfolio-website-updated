@@ -1,8 +1,8 @@
 import "./globals.css";
 import type { Metadata } from "next";
-import Navbar_ from "./components/Navbar";
+import Navbar_ from "./components/Navbar/Navbar";
 import { Poppins } from "next/font/google";
-import Footer from "./components/Footer";
+import Footer from "./components/Footer/Footer";
 
 export const metadata: Metadata = {
   title: "Bartosz Swierzynski - Portfolio",

@@ -1,4 +1,4 @@
-import IconLink from "./IconLink";
+import IconLink from "../IconLink";
 import DropdownArrow from "./ArrowScroll";
 
 // Reference: https://flowbite.com/docs/components/jumbotron/

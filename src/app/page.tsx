@@ -1,11 +1,11 @@
-import Hero from "./components/Hero";
-import About from "./components/About";
-import ProjectList from "./components/ProjectList";
+import Hero from "./components/Hero/Hero";
+import About from "./components/About/About";
+import ProjectList from "./components/Project/ProjectList";
 import { PersonalProjectList, WorkProjectList } from "./constants";
-import ContactForm from "./components/ContactForm";
-import Footer from "./components/Footer";
-import Project from "./components/Project";
-import ProjectHeading from "./components/ProjectHeading";
+import ContactForm from "./components/Contact/ContactForm";
+import Footer from "./components/Footer/Footer";
+import Project from "./components/Project/Project";
+import ProjectHeading from "./components/Project/ProjectHeading";
 
 export default function Home() {
   // console.log("work project list: ", WorkProjectList);

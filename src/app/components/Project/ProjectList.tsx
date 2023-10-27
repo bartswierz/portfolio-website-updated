@@ -1,5 +1,5 @@
 // import { PersonalProjectList } from "../constants";
-import { ProjectData } from "../types";
+import { ProjectData } from "../../types";
 import Project from "./Project";
 
 interface ProjectListProps {

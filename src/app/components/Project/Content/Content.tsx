@@ -1,4 +1,4 @@
-import { ProjectData } from "../../types";
+import { ProjectData } from "../../../types";
 import Description from "./Description";
 import TechnologiesUsed from "./TechnologiesUsed";
 import ContentButtons from "./ContentButtons";

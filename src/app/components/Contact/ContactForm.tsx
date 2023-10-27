@@ -3,8 +3,8 @@ import { useState, useRef, FormEvent, ChangeEvent } from "react";
 import { Label, TextInput, Textarea } from "flowbite-react";
 import { HiMail } from "react-icons/hi";
 import { BsFillPersonFill } from "react-icons/bs";
-import Toast_ from "./Toast";
-import hasIntersected from "../utils/hasIntersected";
+import Toast_ from "../Toast";
+import hasIntersected from "../../utils/hasIntersected";
 
 //REFERENCE VIDEO FOR nodemailer setup: https://www.youtube.com/watch?v=6DAozN-qxr0
 const ContactForm = () => {
@@ -112,7 +112,7 @@ const ContactForm = () => {
       className={`border-[3px] border-white max-w-[550px] w-full bg-primary p-4 rounded-lg my-8 mx-4
     ${
       contactFormHasIntersected
-        ? "animate-fade-right animate-once animate-duration-[300ms] animate-delay-300- animate-ease-in transition-opacity opacity-100 duration-[500ms]"
+        ? "animate-fade-right animate-once animate-duration-[300ms] animate-ease-in transition-opacity opacity-100 duration-[500ms]"
         : "opacity-0"
     }`}
     >
