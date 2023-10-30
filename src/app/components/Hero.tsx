@@ -4,7 +4,15 @@ import DropdownArrow from "./ArrowScroll";
 // Reference: https://flowbite.com/docs/components/jumbotron/
 const Hero = () => {
   return (
-    <section className="w-full min-h-screen flex items-center justify-center relative">
+    <section
+      className="w-full min-h-screen flex items-center justify-center relative"
+      // style={{
+      //   backgroundImage: "url('/images/mountainCodeBackground.jpg')",
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
+    >
       <div className="py-8 px-4 mx-auto max-w-screen-xl text-center lg:py-16">
         <h1 className="mb-4 text-4xl tracking-tight leading-none md:text-5xl lg:text-6xl text-white/90 animate-jump-in animate-once animate-duration-[800ms] animate-delay-500">
           <span className="font-bold">Hi, I&apos;m</span> <span className="text-highlight font-semibold">Bart</span> |{" "}

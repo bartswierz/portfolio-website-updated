@@ -44,17 +44,24 @@ html {
 }
 
 body {
-  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
   /*background: linear-gradient(-45deg, #004e92, #0028ff, #000428, #000428, #0028ff);  */
   /* background: linear-gradient(-45deg, #000, #000000, #000428, #000428, #0028ff); */
-  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  /* background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92);
+  background: linear-gradient(-45deg, #00c1df, #0028ff, #000428, #000428, #004e92); */
 
-  background-size: 125% 125%;
+  /* background-size: 125% 125%;
   animation: gradient 10s ease infinite;
   -moz-animation: gradient 10s ease infinite;
   -webkit-animation: gradient 10s ease infinite;
   -o-animation: gradient 10s ease infinite;
-  -ms-animation: gradient 10s ease infinite;
+  -ms-animation: gradient 10s ease infinite; */
+
+  background-image: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.7)), url(/assets/DallE-Mountain2.png);
+  background-size: cover;
+  /* background-size: contain; */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @keyframes gradient {
