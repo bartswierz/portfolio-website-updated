@@ -1,5 +1,6 @@
-import { technologyIconsList } from "../constants";
+import { technologyIconsList } from "../../constants";
 import Image from "next/image";
+
 // Displays the list of technologies that we currently know and/or familiar with within our About section
 const TechnologiesList = () => {
   return (

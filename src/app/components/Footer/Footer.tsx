@@ -1,5 +1,5 @@
 import Link from "next/link";
-import IconLink from "./IconLink";
+import IconLink from "../IconLink";
 
 const Footer = () => {
   return (

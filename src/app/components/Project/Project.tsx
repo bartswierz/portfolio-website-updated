@@ -1,7 +1,7 @@
 import Content from "./Content/Content";
 // import CarouselDefault from "./Carousel";
 import Modal from "./Content/Modal";
-import { ProjectData } from "../types/index";
+import { ProjectData } from "../../types/index";
 import LaptopMockup from "./LaptopMockup";
 interface ProjectProps {
   data: ProjectData;

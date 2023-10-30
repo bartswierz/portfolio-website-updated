@@ -1,7 +1,7 @@
 "use client";
-import hasIntersected from "../utils/hasIntersected";
+import hasIntersected from "../../utils/hasIntersected";
 import { useRef } from "react";
-import TechnologiesList from "../../../TechnologiesList";
+import TechnologiesList from "../../../../TechnologiesList";
 const About = () => {
   const aboutIntersectionRef = useRef<HTMLDivElement>(null);
   const aboutHasIntersected = hasIntersected(aboutIntersectionRef, 0.3);
