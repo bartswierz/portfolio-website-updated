@@ -7,6 +7,7 @@
   --color: #3123dd; */
   /* --background-color: #3123dd;
   --color: #3123dd; */
+  --initial-vh: 100vh; /* fallback value */
 }
 
 /* SMOOTH SCROLLING */
@@ -58,12 +59,16 @@ body {
 
   /* Image credit: Dall-E AI Generated Background Image - https://chat.openai.com/ */
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.95)), url(/assets/DALLE_space.png);
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
   background-size: cover;
   /* background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-  height: calc(100vh + 60px);
+  /* height: calc(100vh + 60px); */
+  height: calc(var(--initial-vh) + 60px);
 }
 
 @keyframes gradient {
