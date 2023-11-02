@@ -47,9 +47,10 @@ const NavbarNew = () => {
   return (
     <div>
       <nav
-        className={`fixed bg-primary w-full text-white text-base p-3 z-[9999] transition-transform duration-300 
+        className={`fixed bg-primary w-full text-white text-base p-3 z-[9999] transition-transform duration-300 opacity-90-
         ${isNavbarVisible ? `translate-y-0` : `translate-y-[-100%]`} 
-        ${!toggleMenu && "shadow-navbar"}`} //MENU IS NOT OPENED -> ADD SHADOW TO BOTTOM OF NAVBAR
+        ${toggleMenu ? "opacity-100" : "shadow-navbar opacity-90"}`} //MENU IS NOT OPENED -> ADD SHADOW TO BOTTOM OF NAVBAR
+        // ${!toggleMenu && "shadow-navbar"}`} //MENU IS NOT OPENED -> ADD SHADOW TO BOTTOM OF NAVBAR
       >
         <div className="flex items-center justify-between">
           {/* BRAND LOGO */}
