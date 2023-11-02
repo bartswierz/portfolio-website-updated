@@ -58,17 +58,18 @@ body {
   -ms-animation: gradient 10s ease infinite; */
 
   /* Image credit: Dall-E AI Generated Background Image - https://chat.openai.com/ */
-  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.95)), url(/assets/DALLE_space.png);
+  /* background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.95)), url(/assets/DALLE_space.png);
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
-  /* background-size: contain; */
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  height: calc(var(--initial-vh) + 60px); */
+
+  /* background-size: contain; */
   /* height: calc(100vh + 60px); */
-  height: calc(var(--initial-vh) + 60px);
 }
 
 @keyframes gradient {
@@ -178,7 +179,7 @@ body {
   /* background-color: blue; Adjust the color as needed */
 }
 
-//UNDERLINE HOVER EFFECT
+/* //UNDERLINE HOVER EFFECT */
 /* Custom styles for the underline effect */
 .underline-effect::before,
 .underline-effect::after {
