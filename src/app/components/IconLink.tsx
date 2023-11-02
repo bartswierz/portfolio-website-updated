@@ -51,7 +51,7 @@ const IconLink = ({ linkType = "github", animationDelay = "2000ms" }: IconLinkPr
         <Link href={path} className={`animate-fade-down animate-once animate-duration-500 animate-delay-[${animationDelay}]`}>
           <div className="flex flex-col items-center group">
             <span className="group-hover:text-[#0072fe] transition-all duration-300">{icon}</span>
-            <span className="text-sm">{text}</span>
+            <span className="text-sm group-hover:text-[#0072fe] transition-all duration-300">{text}</span>
           </div>
         </Link>
       );
@@ -65,7 +65,7 @@ const IconLink = ({ linkType = "github", animationDelay = "2000ms" }: IconLinkPr
         >
           <div className="flex flex-col items-center group">
             <span className="group-hover:text-[#0072fe] transition-all duration-300">{icon}</span>
-            <span className="text-sm">{text}</span>
+            <span className="text-sm group-hover:text-[#0072fe] transition-all duration-300">{text}</span>
           </div>
         </Link>
       );
