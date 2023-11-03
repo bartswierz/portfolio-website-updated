@@ -37,9 +37,13 @@ const config: Config = {
         primary: "#ffb700",
         secondary: "#0072fe",
         brand: "#ffb700",
+        focus: "#252839",
       },
       boxShadow: {
         navbar: "0 0 20px 0 rgba(0, 0, 0, 0.5)",
+      },
+      ringColor: {
+        primary: "#ffb700",
       },
     },
   },

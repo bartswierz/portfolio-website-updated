@@ -9,6 +9,9 @@ import hasIntersected from "../../utils/hasIntersected";
 //REFERENCE VIDEO FOR nodemailer setup: https://www.youtube.com/watch?v=6DAozN-qxr0
 const ContactForm = () => {
   const [loading, setLoading] = useState(false);
+  const [textareaFocus, setTextareaFocus] = useState(false);
+  const [nameFocus, setNameFocus] = useState(false);
+  const [emailFocus, setEmailFocus] = useState(false);
 
   // For contact form display/remove
   const contactFormIntersectionRef = useRef<HTMLDivElement>(null);
@@ -131,6 +134,8 @@ const ContactForm = () => {
               color={nameInputValidity} // 'failure' | 'success' | ''
               // onChange={(e) => setName(e.target.value)}
               onChange={(e) => handleNameChange(e)}
+              onFocus={() => setNameFocus(true)}
+              onBlur={() => setNameFocus(false)}
               value={name}
               required
               helperText={
@@ -161,11 +166,14 @@ const ContactForm = () => {
                   </p>
                 )
               }
+              value={email}
               placeholder="michaelscott@gmail.com"
-              required
               type="email"
               onChange={(e) => handleEmailChange(e)}
-              value={email}
+              onFocus={() => setEmailFocus(true)}
+              onBlur={() => setEmailFocus(false)}
+              className={`${message.length > 0 || textareaFocus ? "bg-gray-50" : "bg-gray-300"}`}
+              required
             />
           </div>
 
@@ -177,12 +185,16 @@ const ContactForm = () => {
             <Textarea
               id="comment"
               placeholder="Leave a comment..."
-              required
+              value={message}
               rows={4}
               color={""}
               onChange={(e) => setMessage(e.target.value)}
-              value={message}
-              className="min-h-[70px] border-b-2 border-[#fff] rounded-lg focus:outline-none focus:border-[#ffb700]"
+              onFocus={() => setTextareaFocus(true)}
+              onBlur={() => setTextareaFocus(false)}
+              className={`min-h-[70px] rounded-lg border-gray-300 focus:ring-2 focus:ring-primary border-[2px] focus:border-focus transition-colors duration-200 ease-in-out
+              ${message.length > 0 || textareaFocus ? "bg-gray-50" : "bg-gray-300"}
+              `}
+              required
             />
           </div>
         </div>
