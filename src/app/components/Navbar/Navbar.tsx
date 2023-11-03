@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import { useState, useEffect } from "react";
+import { Spin as Hamburger } from "hamburger-react";
 
 const NavbarNew = () => {
   const [active, setActive] = useState("home");
@@ -126,6 +127,11 @@ const NavbarNew = () => {
             <span className="hamburger-middle"></span>
             <span className="hamburger-bottom"></span>
           </button>
+          {/* <span className="block- hamburger md:hidden focus:outline-none flex- justify-center- items-center- p-4- m-2 b flex items-center justify-center b"> */}
+          {/* <button className="block- hamburger md:hidden focus:outline-none flex- justify-center- items-center- p-4- m-2 b flex items-center justify-center b">
+            <Hamburger toggled={toggleMenu} toggle={() => setToggleMenu(!toggleMenu)} label="Show menu" size={20} />
+          </button> */}
+          {/* </span> */}
         </div>
       </nav>
 
