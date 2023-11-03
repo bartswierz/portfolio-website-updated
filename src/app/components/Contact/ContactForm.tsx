@@ -104,11 +104,6 @@ const ContactForm = () => {
     }
   };
 
-  // ${
-  //   contactFormHasIntersected
-  //     ? "animate-jump-in animate-once animate-duration-[500ms] animate-delay-300 animate-ease-in transition-opacity opacity-100 duration-[500ms]"
-  //     : "opacity-0"
-  // }`}
   return (
     <div
       ref={contactFormIntersectionRef}
@@ -132,12 +127,10 @@ const ContactForm = () => {
               id="username3"
               placeholder="Michael Scott"
               color={nameInputValidity} // 'failure' | 'success' | ''
-              // onChange={(e) => setName(e.target.value)}
               onChange={(e) => handleNameChange(e)}
               onFocus={() => setNameFocus(true)}
               onBlur={() => setNameFocus(false)}
               value={name}
-              required
               helperText={
                 //displays text IF input is invalid
                 nameInputValidity === "failure" && (
@@ -146,6 +139,25 @@ const ContactForm = () => {
                   </p>
                 )
               }
+              style={{
+                borderRadius: "0.375rem",
+                borderColor: "rgba(209, 213, 219, 1)",
+                // margin: "2px none",
+                borderWidth: "2px",
+                transition: "background-color 200ms ease-in-out",
+                backgroundColor: name.length > 0 || nameFocus ? "rgba(244, 244, 244, 1)" : "rgba(209, 213, 219, 1)",
+
+                // Apply focus styles conditionally
+                ...(name.length > 0 || nameFocus
+                  ? {
+                      backgroundColor: "rgba(244, 244, 244, 1)", //active color
+                      borderColor: `#252839`, // Match Container Background Color
+                      // boxShadow: "0 0 0 2px #ffb700", // Ring Color
+                      boxShadow: "0 0 0 2px #fff", // Ring Color
+                    }
+                  : {}),
+              }}
+              required
             />
           </div>
 
@@ -168,11 +180,28 @@ const ContactForm = () => {
               }
               value={email}
               placeholder="michaelscott@gmail.com"
+              // type="email"
               type="email"
               onChange={(e) => handleEmailChange(e)}
               onFocus={() => setEmailFocus(true)}
               onBlur={() => setEmailFocus(false)}
-              className={`${message.length > 0 || textareaFocus ? "bg-gray-50" : "bg-gray-300"}`}
+              style={{
+                borderRadius: "0.375rem",
+                borderColor: "rgba(209, 213, 219, 1)",
+                borderWidth: "2px",
+                transition: "background-color 200ms ease-in-out",
+                backgroundColor: email.length > 0 || emailFocus ? "rgba(244, 244, 244, 1)" : "rgba(209, 213, 219, 1)",
+
+                // Apply focus styles conditionally
+                ...(email.length > 0 || emailFocus
+                  ? {
+                      backgroundColor: "rgba(244, 244, 244, 1)", //active color
+                      borderColor: `#252839`, // Match Container Background Color
+                      // boxShadow: "0 0 0 2px #ffb700", // Ring Color
+                      boxShadow: "0 0 0 2px #fff", // Ring Color
+                    }
+                  : {}),
+              }}
               required
             />
           </div>
@@ -191,8 +220,8 @@ const ContactForm = () => {
               onChange={(e) => setMessage(e.target.value)}
               onFocus={() => setTextareaFocus(true)}
               onBlur={() => setTextareaFocus(false)}
-              className={`min-h-[70px] rounded-lg border-gray-300 focus:ring-2 focus:ring-primary border-[2px] focus:border-focus transition-colors duration-200 ease-in-out
-              ${message.length > 0 || textareaFocus ? "bg-gray-50" : "bg-gray-300"}
+              className={`min-h-[70px] rounded-lg border-gray-300 border-[2px] transition-colors duration-200 ease-in-out
+              ${message.length > 0 || textareaFocus ? "bg-gray-50 focus:ring-2 focus:ring-white focus:border-focus" : "bg-gray-300"}
               `}
               required
             />
