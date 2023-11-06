@@ -110,7 +110,7 @@ const NavbarNew = () => {
 
             <a
               href="./files/Bartosz_Swierzynski.pdf"
-              className="group text-gray-400- text-white- text-primary hover:bg-brand/90 hover:text-gray-100 font-semibold transition duration-300 bg-brand px-2 py-1 rounded-md text-md flex gap-1 items-center justify-center"
+              className="group text-primary hover:bg-brand/90 hover:text-gray-100 font-semibold transition duration-300 bg-brand px-2 py-1 rounded-md text-md flex gap-1 items-center justify-center"
               target="_blank"
             >
               <FiExternalLink />
