@@ -10,11 +10,7 @@ const About = () => {
     // <div className="dark:text-white max-w-[700px] text-center md:text-start mx-4" ref={aboutHasIntersected}>
     <div
       className={`dark:text-white max-w-[700px] text-center md:text-start mx-4
-    ${
-      aboutHasIntersected
-        ? "animate-fade-in animate-once animate-duration-[500ms] animate-delay-[400ms] animate-ease-in transition-opacity opacity-100 duration-[500ms]"
-        : "opacity-0"
-    }`}
+    ${aboutHasIntersected ? "animate-fade-up animate-once animate-duration-[600ms] animate-delay-[200ms] animate-ease-in-out" : ""}`}
       ref={aboutIntersectionRef}
     >
       <h2 className="text-2xl md:text-3xl font-bold text-center my-2">About Me</h2>
