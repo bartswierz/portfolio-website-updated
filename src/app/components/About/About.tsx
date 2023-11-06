@@ -7,10 +7,13 @@ const About = () => {
   const aboutHasIntersected = hasIntersected(aboutIntersectionRef, 0.3);
 
   return (
-    // <div className="dark:text-white max-w-[700px] text-center md:text-start mx-4" ref={aboutHasIntersected}>
     <div
       className={`dark:text-white max-w-[700px] text-center md:text-start mx-4
-    ${aboutHasIntersected ? "animate-fade-up animate-once animate-duration-[600ms] animate-delay-[200ms] animate-ease-in-out" : ""}`}
+    ${
+      aboutHasIntersected
+        ? "animate-fade-up animate-once animate-duration-[600ms] animate-delay-[200ms] animate-ease-in-out"
+        : "opacity-0"
+    }`}
       ref={aboutIntersectionRef}
     >
       <h2 className="text-2xl md:text-3xl font-bold text-center my-2">About Me</h2>
