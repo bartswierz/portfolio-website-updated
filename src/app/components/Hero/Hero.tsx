@@ -24,13 +24,13 @@ const Hero = () => {
 
         {/* LINKS */}
         <ul className="text-dark flex flex-row justify-center items-center gap-2 mb-2">
-          <div className={`animate-fade-down animate-once animate-duration-500 animate-delay-[900ms]`}>
+          <div className={`animate-fade-down animate-once animate-duration-500 animate-delay-[1000ms]`}>
             <IconLink linkType="linkedin" />
           </div>
-          <div className={`animate-fade-down animate-once animate-duration-500 animate-delay-[1000ms]`}>
+          <div className={`animate-fade-down animate-once animate-duration-500 animate-delay-[1100ms]`}>
             <IconLink linkType="github" />
           </div>
-          <div className={`animate-fade-down animate-once animate-duration-500 animate-delay-[1100ms]`}>
+          <div className={`animate-fade-down animate-once animate-duration-500 animate-delay-[1200ms]`}>
             <IconLink linkType="contact" />
           </div>
         </ul>
