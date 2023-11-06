@@ -26,7 +26,7 @@ const ContentButtons = ({ liveURL, githubURL, accordionList }: ContentButtonsPro
   return (
     <div className="flex justify-center items-center gap-2 flex-wrap">
       {liveURL && <Button text="View Live" buttonType="link" link={liveURL} />}
-      <Button text={liveURL?.includes("civilience") ? "View Company" : "View Code"} buttonType="link" link={githubURL && githubURL} />
+      <Button text={liveURL?.includes("civilience") ? "View Site" : "View Code"} buttonType="link" link={githubURL && githubURL} />
 
       {/* Open when user clicks Project Description */}
       <Modal accordionList={accordionList} />
