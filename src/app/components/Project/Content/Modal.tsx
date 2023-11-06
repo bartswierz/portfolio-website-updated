@@ -37,6 +37,7 @@ export default function Modal__({ accordionList }: ModalProps) {
         className="bg-gray-900/70 z-[9999] max-h-[30vh]-"
         show={props.openModal === "default"}
         onClose={() => props.setOpenModal(undefined)}
+        dismissible
       >
         <div className="dark:bg-primary overflow-auto max-h-[98vh]-">
           <Modal.Header>Project Overview</Modal.Header>

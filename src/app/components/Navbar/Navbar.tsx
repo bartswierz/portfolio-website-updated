@@ -48,7 +48,7 @@ const NavbarNew = () => {
   return (
     <div>
       <nav
-        className={`fixed bg-primary w-full text-white text-base p-3 z-[9999] transition-transform duration-300 h-[76px]
+        className={`fixed bg-primary w-full text-white text-base p-3- z-[9999] transition-transform duration-300 h-[52px] px-3
         ${isNavbarVisible ? `translate-y-0` : `translate-y-[-100%]`} 
         ${toggleMenu ? "opacity-100" : "shadow-navbar opacity-90"} align-middle flex items-center`} //MENU IS NOT OPENED -> ADD SHADOW TO BOTTOM OF NAVBAR
         // ${!toggleMenu && "shadow-navbar"}`} //MENU IS NOT OPENED -> ADD SHADOW TO BOTTOM OF NAVBAR
@@ -60,7 +60,7 @@ const NavbarNew = () => {
           </span>
 
           {/* DESKTOP - LINKS */}
-          <div className="hidden space-x-8 md:flex">
+          <div className="hidden space-x-8 md:flex align-bottom">
             <a
               href="#home"
               className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
@@ -108,11 +108,11 @@ const NavbarNew = () => {
 
             <a
               href="./files/Bartosz_Swierzynski.pdf"
-              className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
+              className="group text-gray-400- text-white- text-primary hover:bg-brand/80 hover:text-gray-100 font-semibold transition duration-300 bg-brand px-2 py-1 rounded-md text-md"
               target="_blank"
             >
               <p className={`${active === "resume" ? "text-gray-100" : ""} `}>Resume</p>
-              <span className={`${underlineStyle} ${active === "resume" ? "max-w-full" : ""}`}></span>
+              {/* <span className={`${underlineStyle} ${active === "resume" ? "max-w-full" : ""}`}></span> */}
             </a>
           </div>
 
@@ -127,13 +127,13 @@ const NavbarNew = () => {
       <div
         id="menu"
         className={`${
-          toggleMenu ? "translate-y-0- translate-y-5 opacity-100 shadow-navbar" : "translate-y-[-100%] opacity-0"
+          toggleMenu ? "translate-y-1 opacity-100 shadow-navbar" : "translate-y-[-100%] opacity-0"
         } fixed p-3  bg-primary left-0 right-0 top-10 z-10 transition-all duration-500 ease-in-out overflow-y-hidden`}
         // className={`${
         //   toggleMenu ? "translate-y-0 opacity-100" : "translate-y-[-120%] opacity-0"
         // } fixed p-3 rounded-lg bg-primary left-0 right-0 top-10 z-10 transition-all duration-500 ease-in-out overflow-y-hidden shadow-navbar`}
       >
-        <div className="flex flex-col items-center justify-center w-full font-bold text-white rounded-sm- divide-y divide-solid text-center">
+        <div className="flex flex-col items-center justify-center w-full font-bold text-white divide-y divide-solid text-center">
           <a href="#" className="w-full p-2" onClick={() => handleMobileLink("home")}>
             <p
               className={`hover:text-highlight transition-colors duration-300
@@ -176,7 +176,7 @@ const NavbarNew = () => {
           </a>
           <a
             href="./files/Bartosz_Swierzynski.pdf"
-            className="w-full  text-center p-2 hover:text-highlight transition-colors duration-300"
+            className="w-full text-center pt-2 hover:text-highlight transition-colors duration-300 "
             target="_blank"
           >
             Resume
