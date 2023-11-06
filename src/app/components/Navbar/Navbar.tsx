@@ -2,6 +2,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 import { Spin as Hamburger } from "hamburger-react";
+import { FiExternalLink } from "react-icons/fi";
 
 const NavbarNew = () => {
   const [active, setActive] = useState("home");
@@ -70,6 +71,7 @@ const NavbarNew = () => {
               <span className={`${underlineStyle} ${active === "home" ? "max-w-full" : ""}`}></span>
             </a>
 
+            {/* TODO - turn project and work project into one dropdown */}
             <a
               href="#work"
               className="group text-gray-400 hover:text-gray-100 font-semibold transition duration-300"
@@ -108,9 +110,10 @@ const NavbarNew = () => {
 
             <a
               href="./files/Bartosz_Swierzynski.pdf"
-              className="group text-gray-400- text-white- text-primary hover:bg-brand/80 hover:text-gray-100 font-semibold transition duration-300 bg-brand px-2 py-1 rounded-md text-md"
+              className="group text-gray-400- text-white- text-primary hover:bg-brand/90 hover:text-gray-100 font-semibold transition duration-300 bg-brand px-2 py-1 rounded-md text-md flex gap-1 items-center justify-center"
               target="_blank"
             >
+              <FiExternalLink />
               <p className={`${active === "resume" ? "text-gray-100" : ""} `}>Resume</p>
               {/* <span className={`${underlineStyle} ${active === "resume" ? "max-w-full" : ""}`}></span> */}
             </a>
