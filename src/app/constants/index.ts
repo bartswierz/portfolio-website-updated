@@ -211,12 +211,6 @@ const civilienceProject: ProjectData = {
         "This service helps users understand their emotional health by guiding them through a questionnaire and process screens to align their feelings and actions. It also provides community insights based on zipcode.",
     },
     {
-      title: "Project Description",
-      contentType: "paragraph",
-      content:
-        "The Emotional Health Tracker (Feelings Flow Tracker) helps individuals and communities understand their emotional health through a daily survey that provides new vocabulary and aligns feelings and actions. It's designed to be used across the US and is part of the Civilience non-profit organization.",
-    },
-    {
       title: "Why Did I Build This Project?",
       contentType: "paragraph",
       content:
