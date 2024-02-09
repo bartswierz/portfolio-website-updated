@@ -262,13 +262,13 @@ export const technologyIconsList = [
   { name: "Firebase", iconPath: "/assets/firebase-icon.svg" },
   { name: "Vitest", iconPath: "/assets/vitest-icon.svg" },
   { name: "Cypress", iconPath: "/assets/cypress-icon.svg" },
+  { name: "Jest", iconPath: "/assets/jest-icon.svg" },
   { name: "PostgreSQL", iconPath: "/assets/postgresql-icon.svg" },
   { name: "MySQL", iconPath: "/assets/mysql-icon.svg" },
   { name: "Figma", iconPath: "/assets/figma-icon.svg" },
   { name: "Postman", iconPath: "/assets/postman-icon.svg" },
-
-  // { name: "Git", iconPath: "/assets/git-icon.svg" },
-  // { name: "NPM", iconPath: "/assets/npm-icon.svg" },
+  { name: "Git", iconPath: "/assets/git-icon.svg" },
+  { name: "NPM", iconPath: "/assets/npm-icon.svg" },
 ];
 
 // Place current and new projects into this array
