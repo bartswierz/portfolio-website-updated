@@ -245,13 +245,13 @@ const civilienceProject: ProjectData = {
 };
 
 export const technologyIconsList = [
-  { name: "JavaScript", iconPath: "/assets/javascript-icon.svg" },
-  { name: "TypeScript", iconPath: "/assets/typescript-icon.svg" },
-  { name: "HTML5", iconPath: "/assets/html5-icon.svg" },
-  { name: "CSS3", iconPath: "/assets/css3-icon.svg" },
   { name: "React.js", iconPath: "/assets/react-icon.svg" },
   { name: "Redux", iconPath: "/assets/redux-icon.svg" },
   { name: "Next.js", iconPath: "/assets/nextjs-icon.svg" },
+  { name: "TypeScript", iconPath: "/assets/typescript-icon.svg" },
+  { name: "JavaScript", iconPath: "/assets/javascript-icon.svg" },
+  { name: "HTML5", iconPath: "/assets/html5-icon.svg" },
+  { name: "CSS3", iconPath: "/assets/css3-icon.svg" },
   { name: "Tailwind CSS", iconPath: "/assets/tailwindcss-icon.svg" },
   { name: "SCSS", iconPath: "/assets/sass-icon.svg" },
   { name: "Material UI", iconPath: "/assets/material-ui-icon.svg" },
@@ -260,9 +260,15 @@ export const technologyIconsList = [
   { name: "Express.js", iconPath: "/assets/expressjs-icon.svg" },
   { name: "MongoDB", iconPath: "/assets/mongodb-icon.svg" },
   { name: "Firebase", iconPath: "/assets/firebase-icon.svg" },
+  { name: "Vitest", iconPath: "/assets/vitest-icon.svg" },
+  { name: "Cypress", iconPath: "/assets/cypress-icon.svg" },
+  { name: "PostgreSQL", iconPath: "/assets/postgresql-icon.svg" },
+  { name: "MySQL", iconPath: "/assets/mysql-icon.svg" },
+  { name: "Figma", iconPath: "/assets/figma-icon.svg" },
   { name: "Postman", iconPath: "/assets/postman-icon.svg" },
-  { name: "Git", iconPath: "/assets/git-icon.svg" },
-  { name: "NPM", iconPath: "/assets/npm-icon.svg" },
+
+  // { name: "Git", iconPath: "/assets/git-icon.svg" },
+  // { name: "NPM", iconPath: "/assets/npm-icon.svg" },
 ];
 
 // Place current and new projects into this array
