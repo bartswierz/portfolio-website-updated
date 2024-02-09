@@ -19,14 +19,15 @@ const About = () => {
     >
       <h2 className="text-2xl md:text-3xl font-bold text-center my-2">About Me</h2>
       <p className="leading-relaxed text-[18px] md:text-[24px]">
-        I&apos;m a <span className="dark:text-dark">Front-end Developer</span> with
-        <span className="dark:text-dark"> full stack capabilities</span> currently working at a
-        <span className="dark:text-dark"> public health non-profit organization</span>. I&apos;m a recent
-        <span className="dark:text-dark"> DePaul University graduate</span> with a{" "}
-        <span className="dark:text-dark">Bachelor&apos;s Degree</span> in
-        <span className="dark:text-dark"> Computer Science</span> and a <span className="dark:text-dark">curious developer</span> who
-        genuinely loves to learn <span className="dark:text-dark">cutting-edge technologies</span> that elevate my skills as a
-        developer.
+        I&apos;m a <span className="dark:text-dark">Front-end Developer</span> with nearly{" "}
+        <span className="dark:text-dark">two years</span> of honing my skills in front-end technologies. My{" "}
+        <span className="dark:text-dark">Bachelor&apos;s Degree in Computer Science</span> has given me a great foundation to solve
+        <span className="dark:text-dark"> complex real world problems</span>. I&apos;ve led a{" "}
+        <span className="dark:text-dark">5-person front-end team</span> at a{" "}
+        <span className="dark:text-dark">non-profit organization</span> to build an application that{" "}
+        <span className="dark:text-dark">helps communities</span> across the
+        <span className="dark:text-dark"> United States</span> with their <span className="dark:text-dark">Emotional Health</span>. I
+        love to build applications that make a difference in <span className="dark:text-dark">someone&apos;s life</span>.
       </p>
       <TechnologiesList />
     </div>
