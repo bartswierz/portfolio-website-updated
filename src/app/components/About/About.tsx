@@ -28,10 +28,7 @@ const About = () => {
         genuinely loves to learn <span className="dark:text-dark">cutting-edge technologies</span> that elevate my skills as a
         developer.
       </p>
-
-      <div className="b">
-        <TechnologiesList />
-      </div>
+      <TechnologiesList />
     </div>
   );
 };
