@@ -52,6 +52,7 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
                   alt="Laptop Mockup"
                   width={500}
                   height={278}
+                  quality={100}
                 />
               </div>
             ))}
