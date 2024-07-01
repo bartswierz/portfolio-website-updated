@@ -5,7 +5,6 @@ import { useRef } from "react";
 import { Carousel } from "flowbite-react";
 
 interface LaptopMockupProps {
-  // image: string;
   imageList: string[];
 }
 
@@ -43,20 +42,46 @@ const LaptopMockup = ({ imageList }: LaptopMockupProps) => {
           /> */}
           {/* slide is passed the intersecting conditional to only have AUTO SLIDE IF LAPTOP IS IN THE VIEWPORT */}
           {/* <Carousel pauseOnHover indicators={false} slide={isVisible ? true : false}> */}
-          <Carousel pauseOnHover indicators={true} slide={isVisible ? true : false}>
-            {imageList.map((image, idx) => (
-              <div key={idx}>
-                <Image
-                  src={image}
-                  className="h-[156px] md:h-[278px] w-full  object-center animate-fade animate-duration-[1500ms] animate-ease-in"
-                  alt="Laptop Mockup"
-                  width={500}
-                  height={278}
-                  quality={100}
-                />
-              </div>
-            ))}
-          </Carousel>
+          {/* <Carousel pauseOnHover indicators slide={isVisible ? true : false}> */}
+          {/* <Carousel pauseOnHover indicators={imageList.length > 1 ? true : false} slide={isVisible ? true : false}> */}
+
+          {imageList.length > 1 ? (
+            <Carousel pauseOnHover indicators slide={isVisible ? true : false}>
+              {/* <Carousel pauseOnHover indicators={true} data-carousel="static" slide={false}> */}
+              {imageList.map((image, idx) => (
+                <div key={idx}>
+                  <Image
+                    src={image}
+                    className="h-[156px] md:h-[278px] w-full object-center animate-fade animate-duration-[1500ms] animate-ease-in"
+                    alt="Laptop Mockup"
+                    width={500}
+                    height={278}
+                    quality={100}
+                    // priority={true}
+                    // TODO added
+                    // layout="responsive" // Use responsive layout for better rendering
+                    // objectFit="cover" // Ensure the image covers the container
+                    // loading="eager" // Load the image immediately
+                    // placeholder="blur" // Use a blurred image as a placeholder
+                    // // blurDataURL={`/_next/image?url=${image}&w=16&q=1`} // Use a small, blurred data URL as the placeholder
+                    // blurDataURL={image} // Use a small, blurred data URL as the placeholder
+                    // blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mP8z8BQDwAEhQGAhKmMIQAAAABJRU5ErkJggg=="
+                    // onLoad={(e) => console.log(`image loaded in for ${image}`)}
+                    // loading="lazy"
+                  />
+                </div>
+              ))}
+            </Carousel>
+          ) : (
+            <Image
+              src={imageList[0]}
+              className="h-[156px] md:h-[278px] w-full object-center animate-fade animate-duration-[1500ms] animate-ease-in"
+              alt="Laptop Mockup"
+              width={500}
+              height={278}
+              quality={100}
+            />
+          )}
         </div>
       </div>
 

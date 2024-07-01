@@ -23,7 +23,6 @@ export default async function ContactAPI(req, res) {
   });
 
   // TODO - 19:00 mark SETUP GOOGLE PASSWORD MANAGER - IT WILL NOT WORK IF WE DONT SET THAT UP FIRST
-  //Stopped at 22:30 mark to setup google password manager
   try {
     const mail = await transporter.sendMail({
       from: process.env.user,
@@ -36,7 +35,6 @@ export default async function ContactAPI(req, res) {
       <p>${data.email}</p>
       <p>${data.message}</p>
       `,
-      // html: `<div>${data.message}</div>`,
     });
 
     console.log("Message sent: ", mail.messageId);

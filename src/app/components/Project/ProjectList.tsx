@@ -11,7 +11,7 @@ const ProjectList = ({ list }: ProjectListProps) => {
   // console.log("list", list);
   return (
     <div className="grid grid-cols-1 xl:grid-cols-2 w-full max-w-[1400px] gap-12 text-white justify-items-center  mb-14">
-      {list.map((project, index) => (
+      {list.map((project) => (
         <div key={project.id} className={`relative`}>
           <Project data={project} key={project.id} />
         </div>
@@ -21,12 +21,3 @@ const ProjectList = ({ list }: ProjectListProps) => {
 };
 
 export default ProjectList;
-
-/*
-FOR ODD NUMBER OF PROJECTS - Center last one
-{list.map((project, index) => (
-        <div key={project.id} className={`relative ${index === list.length - 1 ? "xl:col-span-2 xl:justify-self-center" : ""}`}>
-          <Project data={project} key={project.id} />
-        </div>
-      ))}
-*/

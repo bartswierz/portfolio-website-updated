@@ -16,7 +16,7 @@ export default function Modal__({ accordionList }: ModalProps) {
     <>
       {/* BUTTON TO OPEN MODAL */}
       <button
-        className="relative inline-flex items-center justify-start px-5 py-2 overflow-hidden font-bold rounded-lg group  text-sm"
+        className="relative inline-flex items-center justify-start px-5 py-2 overflow-hidden font-bold rounded-lg group text-sm"
         onClick={() => props.setOpenModal("default")}
       >
         {/* GRAY SHAPE DESIGN */}
@@ -44,16 +44,6 @@ export default function Modal__({ accordionList }: ModalProps) {
           <Modal.Body>
             <Accordion__ accordionList={accordionList} />
           </Modal.Body>
-          {/* <Modal.Footer className="flex justify-center items-end b"> */}
-          {/* <Modal.Footer className="justify-end">
-            <Button
-              color=""
-              className="border-[2px] border-white text-white font-semibold hover:bg-technology"
-              onClick={() => props.setOpenModal(undefined)}
-            >
-              Close
-            </Button>
-          </Modal.Footer> */}
         </div>
       </Modal>
     </>
